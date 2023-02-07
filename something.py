@@ -4,33 +4,36 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import pymysql.cursors
 sns.set(rc={'figure.figsize':(10,5)})
-total = pd.read_csv('/Users/23behmen_t/Desktop/Programming/IA/total.csv', index_col=0)
-items = pd.read_csv('/Users/23behmen_t/Desktop/Programming/IA/items.csv', index_col=0)
-
-#Bring in dataset through pymysql
 
 
-# # Connect to the database
-# conn = pymysql.connect(
-#     host='learningcomputerscience.com',port=3306, user='9_8_BT', password='linuxASW!',database='9_8_BT', charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
+lis = []
+lis2= []
+# Connect to the database
+conn = pymysql.connect(
+    host='learningcomputerscience.com',port=3306, user='test_remote', password='test_remote!',database='9_8_BT', charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
 
-# # Create a cursor object
-# cursor = conn.cursor()
+# Create a cursor object
+cursor = conn.cursor()
 
-# # Execute a SELECT query
-# cursor.execute("SELECT ID FROM recipt")
+# Execute a SELECT query
+cursor.execute("SELECT * FROM recipt")
+results = cursor.fetchall()
+for result in results:
+    # print(result)
+    lis.append(result)
+total = pd.DataFrame.from_dict(lis)
 
-# # Fetch the results
-# results = cursor.fetchall()
+cursor.execute("SELECT * FROM items")
+results = cursor.fetchall()
+for result in results:
+    # print(result)
+    lis2.append(result)
+items = pd.DataFrame.from_dict(lis2)
+items.set_index("name")
 
-# # Loop through the results
-# for result in results:
-#     print(result)
-
-# # Close the cursor and connection
-# cursor.close()
-# conn.close()
-
+# Close the cursor and connection
+cursor.close()
+conn.close()
 
 
 def findrev(x):
