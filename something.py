@@ -2,29 +2,106 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import pymysql.cursors
+sns.set(rc={'figure.figsize':(10,5)})
+total = pd.read_csv('/Users/23behmen_t/Desktop/Programming/IA/total.csv', index_col=0)
+items = pd.read_csv('/Users/23behmen_t/Desktop/Programming/IA/items.csv', index_col=0)
+
+#Bring in dataset through pymysql
+
+
+# # Connect to the database
+# conn = pymysql.connect(
+#     host='learningcomputerscience.com',port=3306, user='9_8_BT', password='linuxASW!',database='9_8_BT', charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
+
+# # Create a cursor object
+# cursor = conn.cursor()
+
+# # Execute a SELECT query
+# cursor.execute("SELECT ID FROM recipt")
+
+# # Fetch the results
+# results = cursor.fetchall()
+
+# # Loop through the results
+# for result in results:
+#     print(result)
+
+# # Close the cursor and connection
+# cursor.close()
+# conn.close()
+
+
+
+def findrev(x):
+    for index, row in items.iterrows():
+        if x == index:
+            c = row['price_sold']
+    return c
+
+for index, row in total.iterrows():
+    x = row['item']
+    if row['quantity_bought'] == 0:
+        total.loc[index, 'quantity_bought'] = 1
+    if row['rev'] == 0:
+        total.loc[index, 'rev'] = findrev(x)
+
+totalrev=0
+for tr in total['rev']:
+    totalrev = totalrev +tr
+
+def findprofit(a,x,b,y):
+    profit = 0
+    for index, row in y.iterrows():
+        if x == index:
+            c = row['og_price']
+            profit = (a - (b*c))
+    return profit
+
+totalprofit = 0
+t = total
+t['profit'] = 0
+for index, row in t.iterrows():
+    x = row['item']
+    a = row['rev']
+    b = row['quantity_bought']
+    t.loc[index, 'profit'] = findprofit(a,x,b,table1)
+    totalprofit += findprofit(a,x,b,table1)
+
+itemxprofit = items
+itemxprofit['profit'] = 0
+puprofit = 0
+
+for index, row in itemxprofit.iterrows():
+    x = index
+    for index, row in t.iterrows():
+        if x == row['item']:
+            c = row['profit']
+            puprofit += c
+    itemxprofit.loc[x, 'profit'] = puprofit
+    puprofit = 0
+
+itemxprofit['bought'] = 0
+
+for index, row in t.iterrows():
+    x = row['item']
+    c = row['quantity_bought']
+    for index, row in itemxprofit.iterrows():
+        if index == x:
+            itemxprofit.at[index, 'bought'] += c
+
+
+
+
 # Add a title and intro text
-st.title('Earthquake Data Explorer')
-st.text('This is a web app to allow exploration of Earthquake Data')
-# Create file uploader object
-upload_file = st.file_uploader('Upload a file containing earthquake data')
-# Check to see if a file has been uploaded
-if upload_file is not None:
-   # If it has then do the following:
-   # Read the file to a dataframe using pandas
-   df = pd.read_csv(upload_file)
-   # Create a section for the dataframe statistics
-   st.header('Statistics of Dataframe')
-   st.write(df.describe())
-   # Create a section for the dataframe header
-   st.header('Header of Dataframe')
-   st.write(df.head())
-   # Create a section for matplotlib figure
-   st.header('Plot of Data')
-   fig, ax = plt.subplots(1,1)
-   ax.scatter(x=df['Depth'], y=df['Magnitude'])
-   ax.set_xlabel('Depth')
-   ax.set_ylabel('Magnitude')
-   st.pyplot(fig)
+st.title('Data Analysis')
+st.text('This is a web app to explore purchasing data, and see some visual data of the processes.')
+
+st.text('total revenue ===', totalrev)
+st.text("total profit ===", totalprofit)
+
+st.write(itemxprofit.head(100))
+
 
 
 # https://www.youtube.com/watch?v=VqgUkExPvLY - interesting video which might be able to help with the code.

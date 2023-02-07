@@ -1,4 +1,89 @@
-﻿id,date,time,item,quantity_bought,rev
+﻿ID  1,date,time,item,quantity_bought,rev
+711,"Monday, February 6, 2023",15:26,Fit Sante Apricot Cookies 300g,2,8
+710,"Monday, February 6, 2023",15:15,Still Water 500ml,1,2.5
+709,"Monday, February 6, 2023",15:15,Lajkonik Crackers,1,4.5
+708,"Monday, February 6, 2023",14:53,Nestle Whole Grain with Chocolate 23g,1,4
+707,"Monday, February 6, 2023",14:34,Bunny Curly Corn Spirals 25 g,1,4
+706,"Monday, February 6, 2023",14:31,Biscoff Biscuits,2,2
+705,"Monday, February 6, 2023",14:31,Oshee Vitamin Minerals Pink 0.25L,1,5
+704,"Monday, February 6, 2023",14:29,Biscoff Biscuits,1,1
+703,"Monday, February 6, 2023",14:28,FL Salted Nuts 100g,1,4
+702,"Monday, February 6, 2023",14:28,Lajkonik Crackers,1,4.5
+701,"Monday, February 6, 2023",14:27,Bunny Curly Corn Spirals 25 g,1,4
+700,"Monday, February 6, 2023",14:27,Aksam Beskidzie Crackers Cheese/Onion,1,4.5
+699,"Monday, February 6, 2023",14:26,Oshee Vitamin Minerals Pink 0.25L,1,5
+698,"Monday, February 6, 2023",14:26,Still Water 500ml,1,2.5
+697,"Monday, February 6, 2023",14:12,Nestle Whole Grain with Chocolate 23g,2,8
+696,"Monday, February 6, 2023",14:02,Nestle Whole Grain with Chocolate 23g,1,4
+695,"Monday, February 6, 2023",13:15,Biscoff Biscuits,5,5
+694,"Monday, February 6, 2023",13:09,Aksam Beskidzie Crackers Cheese/Onion,1,4.5
+693,"Monday, February 6, 2023",13:09,Lajkonik Crackers,1,4.5
+692,"Monday, February 6, 2023",13:07,Biscoff Biscuits,7,7
+691,"Monday, February 6, 2023",13:07,Aksam Beskidzie Crackers Cheese/Onion,1,4.5
+690,"Monday, February 6, 2023",13:05,Bunny Curly Corn Spirals 25 g,1,4
+689,"Monday, February 6, 2023",13:04,Lajkonik Crackers,1,4.5
+688,"Monday, February 6, 2023",13:04,Lajkonik Crackers,1,4.5
+687,"Monday, February 6, 2023",13:02,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+686,"Monday, February 6, 2023",12:53,Nestle Whole Grain with Chocolate 23g,1,4
+685,"Monday, February 6, 2023",12:49,Tymbark Multivitamin Juice 300 ml,1,4
+684,"Monday, February 6, 2023",12:49,Lajkonik Crackers,1,4.5
+683,"Monday, February 6, 2023",12:36,Bunny Curly Corn Spirals 25 g,1,4
+682,"Monday, February 6, 2023",12:31,Nestle Fit Granola Bar Cranberry-Chocolate Mix 23.5g,1,4
+681,"Monday, February 6, 2023",12:26,Belvita Cookie,1,2.5
+680,"Monday, February 6, 2023",12:21,Nestle Whole Grain with Chocolate 23g,1,4
+679,"Monday, February 6, 2023",12:20,FL Salted Nuts 100g,1,4
+678,"Monday, February 6, 2023",12:11,Aksam Beskidzie Crackers Cheese/Onion,1,4.5
+677,"Monday, February 6, 2023",12:11,Tymbark Apple Juice 300 ml,1,4
+676,"Monday, February 6, 2023",12:09,Hortex Multivitamin Juice 300ml,1,4
+675,"Monday, February 6, 2023",12:01,Nestle Musli Bar Banana-Chocolate Mix 35g,1,4
+674,"Monday, February 6, 2023",11:59,Biscoff Biscuits,3,3
+673,"Monday, February 6, 2023",11:59,Lajkonik Crackers,2,9
+672,"Monday, February 6, 2023",11:59,Bunny Curly Corn Spirals 25 g,2,8
+671,"Monday, February 6, 2023",11:58,Oshee Vitamin Minerals Pink 0.25L,2,10
+670,"Monday, February 6, 2023",11:58,Oshee Vitamin Mineral Dragonfruit 555ml,2,12
+669,"Monday, February 6, 2023",11:58,Oshee Vitamin Energy Zero Magnesium 250ml,3,13.5
+668,"Monday, February 6, 2023",11:57,POP N CHRUP Snack Sea Salt Blue 35g,1,5
+667,"Monday, February 6, 2023",11:57,POP N CHRUP Snack Sea Salt Blue 35g,4,20
+666,"Monday, February 6, 2023",11:18,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+665,"Monday, February 6, 2023",11:14,Nestle Fit Granola Bar Cranberry-Chocolate Mix 23.5g,1,4
+664,"Monday, February 6, 2023",11:13,POP N CHRUP Snack Sea Salt Blue 35g,1,5
+663,"Monday, February 6, 2023",11:13,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+662,"Monday, February 6, 2023",11:11,Biscoff Biscuits,1,1
+661,"Monday, February 6, 2023",11:11,Nestle Whole Grain with Chocolate 23g,1,4
+660,"Monday, February 6, 2023",11:10,Felix Peanuts 240g,1,12
+659,"Monday, February 6, 2023",11:03,Lajkonik Crackers,1,4.5
+658,"Monday, February 6, 2023",11:02,Aksam Beskidzie Crackers Cheese/Onion,1,4.5
+657,"Monday, February 6, 2023",11:02,Oshee Vitamin Mineral Dragonfruit 555ml,2,12
+656,"Monday, February 6, 2023",11:02,Biscoff Biscuits,10,10
+655,"Monday, February 6, 2023",11:01,Biscoff Biscuits,4,4
+654,"Monday, February 6, 2023",11:01,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+653,"Monday, February 6, 2023",11:00,Biscoff Biscuits,3,3
+652,"Monday, February 6, 2023",11:00,Oshee Vitamin Minerals Pink 0.25L,1,5
+651,"Monday, February 6, 2023",10:59,FL Salted Nuts 100g,2,8
+650,"Monday, February 6, 2023",10:59,Nestle Fit Granola Bar Cranberry-Chocolate Mix 23.5g,1,4
+649,"Monday, February 6, 2023",10:58,Nestle Whole Grain with Chocolate 23g,1,4
+648,"Monday, February 6, 2023",10:58,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+647,"Monday, February 6, 2023",10:58,Nestle Musli Bar Banana-Chocolate Mix 35g,1,4
+646,"Monday, February 6, 2023",10:58,Hortex Multivitamin Juice 300ml,1,4
+645,"Monday, February 6, 2023",10:33,Still Water 500ml,1,2.5
+644,"Monday, February 6, 2023",10:20,Biscoff Biscuits,1,1
+643,"Monday, February 6, 2023",10:20,Lajkonik Crackers,1,4.5
+642,"Monday, February 6, 2023",10:16,Biscoff Biscuits,4,4
+641,"Monday, February 6, 2023",09:59,FL Salted Nuts 100g,2,8
+640,"Monday, February 6, 2023",09:59,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+639,"Monday, February 6, 2023",09:57,POP N CHRUP Snack Sea Salt Blue 35g,1,5
+638,"Monday, February 6, 2023",09:57,FL Salted Nuts 100g,1,4
+637,"Monday, February 6, 2023",09:57,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+636,"Monday, February 6, 2023",09:51,Lajkonik Crackers,1,4.5
+635,"Monday, February 6, 2023",09:49,POP N CHRUP Snack Sea Salt Blue 35g,1,5
+634,"Monday, February 6, 2023",09:42,BA! Granola Bar 40g,1,4.5
+633,"Monday, February 6, 2023",09:40,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+632,"Monday, February 6, 2023",09:40,Aksam Beskidzie Crackers Cheese/Onion,1,4.5
+631,"Monday, February 6, 2023",09:40,Tymbark Apple Juice 300 ml,1,4
+630,"Monday, February 6, 2023",08:56,Tymbark Orange Juice 300 ml,1,4
+629,"Monday, February 6, 2023",08:56,Tymbark Orange Juice 300 ml,1,4
+628,"Monday, February 6, 2023",08:56,Tymbark Orange Juice 300 ml,1,4
+627,"Monday, February 6, 2023",08:50,Biscoff Biscuits,1,1
 626,"Friday, February 3, 2023",15:34,Biscoff Biscuits,2,2
 625,"Friday, February 3, 2023",15:26,POP N CHRUP Snack Sea Salt Blue 35g,1,5
 624,"Friday, February 3, 2023",15:26,Nestle Musli Bar Banana-Chocolate Mix 35g,1,4
@@ -15,7 +100,7 @@
 613,"Friday, February 3, 2023",14:42,Lajkonik Junior Safari Crackers,1,5
 612,"Friday, February 3, 2023",14:42,Oshee Vitamin Minerals Pink 0.25L,1,5
 611,"Friday, February 3, 2023",14:32,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
-610,"Friday, February 3, 2023",14:30,Oshee Vitamin Energy Zero Magnesium 250ml,1,4.5
+610,"Friday, February 3, 2023",14:30,Oshee Vitamin Energy Zero Magnesium 250ml,0,0
 609,"Friday, February 3, 2023",14:26,Nestle Musli Bar Banana-Chocolate Mix 35g,1,4
 608,"Friday, February 3, 2023",14:26,Aksam Beskidzie Crackers Cheese/Onion,1,4.5
 607,"Friday, February 3, 2023",14:26,Nestle Whole Grain with Chocolate 23g,1,4
@@ -52,7 +137,7 @@
 576,"Friday, February 3, 2023",13:03,Oshee Vitamin Minerals Pink 0.25L,1,5
 575,"Friday, February 3, 2023",13:03,Lajkonik Junior Safari Crackers,1,5
 574,"Friday, February 3, 2023",12:59,POP N CHRUP Snack Sea Salt Blue 35g,1,5
-573,"Friday, February 3, 2023",12:58,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+573,"Friday, February 3, 2023",12:58,Oshee Vitamin Mineral Dragonfruit 555ml,0,0
 572,"Friday, February 3, 2023",12:58,Oshee Vitamin Minerals Pink 0.25L,2,10
 571,"Friday, February 3, 2023",12:58,Oshee Vitamin Minerals Pink 0.25L,2,10
 570,"Friday, February 3, 2023",12:58,Oshee Vitamin Minerals Pink 0.25L,2,10
@@ -129,13 +214,13 @@
 499,"Friday, February 3, 2023",09:20,Go On Brownie Protein Cookie 50g,1,7
 498,"Friday, February 3, 2023",09:09,Still Water 500ml,1,2.5
 497,"Friday, February 3, 2023",09:09,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
-496,"Wednesday, February 1, 2023",13:27,Oshee Protein Bar Chocolate 45g,1,6
-495,"Wednesday, February 1, 2023",13:27,POP N CHRUP Snack Sea Salt Blue 35g,1,5
-494,"Wednesday, February 1, 2023",13:27,GO ON Protein Crisp/Caramel 50g,1,6
-493,"Wednesday, February 1, 2023",13:26,Lajkonik Junior Safari Crackers,1,5
-492,"Wednesday, February 1, 2023",13:26,Oshee Vitamin Mineral Dragonfruit 555ml,2,12
+496,"Thursday, February 2, 2023",13:27,Oshee Protein Bar Chocolate 45g,1,6
+495,"Thursday, February 2, 2023",13:27,POP N CHRUP Snack Sea Salt Blue 35g,1,5
+494,"Thursday, February 2, 2023",13:27,GO ON Protein Crisp/Caramel 50g,1,6
+493,"Thursday, February 2, 2023",13:26,Lajkonik Junior Safari Crackers,1,5
+492,"Thursday, February 2, 2023",13:26,Oshee Vitamin Mineral Dragonfruit 555ml,2,12
 491,"Wednesday, February 1, 2023",15:31,Go On Brownie Protein Cookie 50g,1,7
-490,"Wednesday, February 1, 2023",15:01,Aksam Beskidzie Salted Pretzels,1,5
+490,"Wednesday, February 1, 2023",15:01,Aksam Beskidzie Salted Pretzels,0,0
 489,"Wednesday, February 1, 2023",15:01,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
 488,"Wednesday, February 1, 2023",15:00,Lajkonik Junior Safari Crackers,1,5
 487,"Wednesday, February 1, 2023",15:00,Lajkonik Crackers,1,4.5
@@ -205,23 +290,23 @@
 423,"Wednesday, February 1, 2023",13:57,POP N CHRUP Snack Sea Salt Blue 35g,1,5
 422,"Wednesday, February 1, 2023",13:57,Go On Brownie Protein Cookie 50g,1,7
 421,"Wednesday, February 1, 2023",13:57,FL Salted Nuts 100g,2,8
-420,"Wednesday, February 1, 2023",13:25,POP N CHRUP Snack Sea Salt Blue 35g,1,5
-419,"Wednesday, February 1, 2023",13:22,Go On Brownie Protein Cookie 50g,1,7
-418,"Wednesday, February 1, 2023",13:21,Go On Brownie Protein Cookie 50g,1,7
-417,"Wednesday, February 1, 2023",13:21,Raspberry Beet Strawberry Smoothie 0.3L,1,12
-416,"Wednesday, February 1, 2023",13:18,Oshee Musli Bar Cranberry Pink 40g,1,5
-415,"Wednesday, February 1, 2023",13:15,Ginger shot 50g,1,12
-414,"Wednesday, February 1, 2023",13:14,Aksam Beskidzie Salted Pretzels,1,5
-413,"Wednesday, February 1, 2023",13:09,Go On Brownie Protein Cookie 50g,1,7
-412,"Wednesday, February 1, 2023",13:03,Oshee Vitamin Minerals Pink 0.25L,1,6
-411,"Wednesday, February 1, 2023",12:56,Lajkonik Junior Safari Crackers,1,5
-410,"Wednesday, February 1, 2023",12:56,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
-409,"Wednesday, February 1, 2023",12:56,Nestle Musli Bar Banana-Chocolate Mix 35g,1,4
-408,"Wednesday, February 1, 2023",12:56,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
-407,"Wednesday, February 1, 2023",12:49,POP N Chrup Snack Green Onion Green 35g,1,5
-406,"Wednesday, February 1, 2023",12:48,POP N CHRUP Snack Sea Salt Blue 35g,1,5
-405,"Wednesday, February 1, 2023",12:48,Aksam Beskidzie Salted Pretzels,1,5
-404,"Wednesday, February 1, 2023",12:48,Lajkonik Junior Safari Crackers,1,5
+420,"Wednesday, February 1, 2023",13:25,POP N CHRUP Snack Sea Salt Blue 35g,0,0
+419,"Wednesday, February 1, 2023",13:22,Go On Brownie Protein Cookie 50g,0,0
+418,"Wednesday, February 1, 2023",13:21,Go On Brownie Protein Cookie 50g,0,0
+417,"Wednesday, February 1, 2023",13:21,Raspberry Beet Strawberry Smoothie 0.3L,0,0
+416,"Wednesday, February 1, 2023",13:18,Oshee Musli Bar Cranberry Pink 40g,0,0
+415,"Wednesday, February 1, 2023",13:15,Ginger shot 50g,0,0
+414,"Wednesday, February 1, 2023",13:14,Aksam Beskidzie Salted Pretzels,0,0
+413,"Wednesday, February 1, 2023",13:09,Go On Brownie Protein Cookie 50g,0,0
+412,"Wednesday, February 1, 2023",13:03,Oshee Vitamin Minerals Pink 0.25L,0,0
+411,"Wednesday, February 1, 2023",12:56,Lajkonik Junior Safari Crackers,0,0
+410,"Wednesday, February 1, 2023",12:56,Oshee Vitamin Mineral Dragonfruit 555ml,0,0
+409,"Wednesday, February 1, 2023",12:56,Nestle Musli Bar Banana-Chocolate Mix 35g,0,0
+408,"Wednesday, February 1, 2023",12:56,Oshee Vitamin Mineral Dragonfruit 555ml,0,0
+407,"Wednesday, February 1, 2023",12:49,POP N Chrup Snack Green Onion Green 35g,0,0
+406,"Wednesday, February 1, 2023",12:48,POP N CHRUP Snack Sea Salt Blue 35g,0,0
+405,"Wednesday, February 1, 2023",12:48,Aksam Beskidzie Salted Pretzels,0,0
+404,"Wednesday, February 1, 2023",12:48,Lajkonik Junior Safari Crackers,0,0
 403,"Wednesday, February 1, 2023",12:24,Talarki Krakowskie 155g,1,6
 402,"Wednesday, February 1, 2023",12:23,POP N CHRUP Snack Sea Salt Blue 35g,1,5
 401,"Wednesday, February 1, 2023",12:23,Lajkonik Crackers,1,4.5
@@ -259,7 +344,7 @@
 369,"Wednesday, February 1, 2023",11:06,Tymbark Multivitamin Juice 300 ml,1,4
 368,"Wednesday, February 1, 2023",11:02,Talarki Krakowskie 155g,1,6
 367,"Wednesday, February 1, 2023",11:01,Go On Brownie Protein Cookie 50g,1,7
-366,"Wednesday, February 1, 2023",11:01,Lajkonik Crackers,1,4.5
+366,"Wednesday, February 1, 2023",11:01,Lajkonik Crackers,0,0
 365,"Wednesday, February 1, 2023",10:59,Lajkonik Junior Safari Crackers,1,5
 364,"Wednesday, February 1, 2023",10:57,POP N Chrup Snack Green Onion Green 35g,1,5
 363,"Wednesday, February 1, 2023",10:57,GO ON Protein Crisp/Caramel 50g,1,6
@@ -317,7 +402,7 @@
 311,"Monday, January 30, 2023",14:21,Hortex Blackberry 300ml (Czarna Porzeczka),1,4
 310,"Monday, January 30, 2023",14:21,Schweppes Tonic 0.85L,1,8
 309,"Monday, January 30, 2023",14:21,Goldfish,1,30
-308,"Monday, January 30, 2023",14:21,Goldfish,1,30
+308,"Monday, January 30, 2023",14:21,Goldfish,0,0
 307,"Monday, January 30, 2023",14:20,Lajkonik Junior Safari Crackers,1,5
 306,"Monday, January 30, 2023",14:20,Lajkonik Crackers,1,4.5
 305,"Monday, January 30, 2023",14:19,Tymbark Apple Juice 300 ml,1,4
@@ -343,8 +428,8 @@
 285,"Monday, January 30, 2023",13:08,Nestle Whole Grain with Chocolate 23g,1,4
 284,"Monday, January 30, 2023",13:07,Lajkonik Junior Safari Crackers,1,5
 283,"Monday, January 30, 2023",13:07,Aksam Beskidzie Salted Pretzels,1,5
-282,"Monday, January 30, 2023",13:05,Goldfish,1,30
-281,"Monday, January 30, 2023",13:05,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+282,"Monday, January 30, 2023",13:05,Goldfish,0,0
+281,"Monday, January 30, 2023",13:05,Oshee Vitamin Mineral Dragonfruit 555ml,0,0
 280,"Monday, January 30, 2023",13:04,Goldfish,1,30
 279,"Monday, January 30, 2023",13:03,Go On Brownie Protein Cookie 50g,1,7
 278,"Monday, January 30, 2023",13:02,Goldfish,1,30
@@ -360,9 +445,9 @@
 268,"Monday, January 30, 2023",12:37,Go On Brownie Protein Cookie 50g,1,7
 267,"Monday, January 30, 2023",12:37,Go On Brownie Protein Cookie 50g,1,7
 266,"Monday, January 30, 2023",12:36,Oshee Vitamin Minerals Pink 0.25L,1,5
-265,"Monday, January 30, 2023",12:35,Apple Banana Carrot Smoothie 0.3L,1,12
-264,"Monday, January 30, 2023",12:33,Go On Brownie Protein Cookie 50g,1,7
-263,"Monday, January 30, 2023",12:33,Apple Banana Carrot Smoothie 0.3L,1,12
+265,"Monday, January 30, 2023",12:35,Apple Banana Carrot Smoothie 0.3L,0,0
+264,"Monday, January 30, 2023",12:33,Go On Brownie Protein Cookie 50g,0,0
+263,"Monday, January 30, 2023",12:33,Apple Banana Carrot Smoothie 0.3L,0,0
 262,"Monday, January 30, 2023",12:33,Nestle Fit Granola Bar Cranberry-Chocolate Mix 23.5g,1,4
 261,"Monday, January 30, 2023",12:29,Still Water 500ml,1,2.5
 260,"Monday, January 30, 2023",12:27,Biscoff Biscuits,2,2
@@ -535,12 +620,12 @@
 46,"Wednesday, January 25, 2023",12:34,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
 45,"Wednesday, January 25, 2023",12:33,Talarki Krakowskie 155g,1,6
 44,"Wednesday, January 25, 2023",12:32,Nestle Whole Grain with Chocolate 23g,1,4
-43,"Wednesday, January 25, 2023",12:31,Oshee Vitamin Energy Zero Magnesium 250ml,1,0
+43,"Wednesday, January 25, 2023",12:31,Oshee Vitamin Energy Zero Magnesium 250ml,0,0
 42,"Wednesday, January 25, 2023",12:30,Talarki Krakowskie 155g,1,6
 41,"Wednesday, January 25, 2023",12:30,Aksam Beskidzie Crackers Cheese/Onion,1,4.5
 40,"Wednesday, January 25, 2023",12:30,Hortex Blackberry 300ml (Czarna Porzeczka),1,4
 39,"Wednesday, January 25, 2023",12:28,Belvita Cookie,2,5
-38,"Wednesday, January 25, 2023",12:27,Still Water 500ml,1,2
+38,"Wednesday, January 25, 2023",12:27,Still Water 500ml,0,0
 37,"Wednesday, January 25, 2023",12:27,Schweppes Citrus Mix 0.85L,1,8
 36,"Wednesday, January 25, 2023",12:27,Talarki Krakowskie 155g,1,6
 35,"Wednesday, January 25, 2023",12:27,Oshee Vitamin Energy Zero Magnesium 250ml,1,4.5
@@ -552,13 +637,13 @@
 29,"Wednesday, January 25, 2023",12:23,Belvita Cookie,3,7.5
 28,"Wednesday, January 25, 2023",12:23,Oshee Vitamin Energy Zero Magnesium 250ml,1,4.5
 27,"Wednesday, January 25, 2023",12:22,Nestle Musli Bar Banana-Chocolate Mix 35g,1,4
-26,"Wednesday, January 25, 2023",12:22,Belvita Cookie,1,1
-25,"Wednesday, January 25, 2023",12:22,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
-24,"Wednesday, January 25, 2023",12:21,Talarki Krakowskie 155g,1,6
+26,"Wednesday, January 25, 2023",12:22,Belvita Cookie,0,0
+25,"Wednesday, January 25, 2023",12:22,Oshee Vitamin Mineral Dragonfruit 555ml,0,0
+24,"Wednesday, January 25, 2023",12:21,Talarki Krakowskie 155g,0,0
 23,"Wednesday, January 25, 2023",12:20,Nestle Fit Granola Bar Cranberry-Chocolate Mix 23.5g,1,4
 22,"Wednesday, January 25, 2023",12:19,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
-21,"Wednesday, January 25, 2023",12:19,"Peanuts ""Orzeszki Ziemne"" 350g",1,5
-20,"Wednesday, January 25, 2023",12:19,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+21,"Wednesday, January 25, 2023",12:19,"Peanuts ""Orzeszki Ziemne"" 350g",0,0
+20,"Wednesday, January 25, 2023",12:19,Oshee Vitamin Mineral Dragonfruit 555ml,0,0
 19,"Wednesday, January 25, 2023",12:19,FL Salted Nuts 100g,1,4
 18,"Wednesday, January 25, 2023",12:19,Ginger shot 50g,1,12
 17,"Wednesday, January 25, 2023",12:18,Nestle Whole Grain with Chocolate 23g,2,8
@@ -567,7 +652,7 @@
 14,"Wednesday, January 25, 2023",12:18,Oshee Vitamin Energy Zero Magnesium 250ml,2,9
 13,"Wednesday, January 25, 2023",12:17,Belvita Cookie,2,5
 12,"Wednesday, January 25, 2023",12:16,Ginger shot 50g,2,24
-11,"Wednesday, January 25, 2023",12:15,Lajkonik Pretzel Crackers,1,4.5
-10,"Wednesday, January 25, 2023",12:15,Oshee Vitamin Mineral Dragonfruit 555ml,1,6
+11,"Wednesday, January 25, 2023",12:15,Lajkonik Pretzel Crackers,0,0
+10,"Wednesday, January 25, 2023",12:15,Oshee Vitamin Mineral Dragonfruit 555ml,0,0
 9,"Wednesday, January 25, 2023",12:05,Nestle Whole Grain with Chocolate 23g,5,20
 8,"Wednesday, January 25, 2023",12:03,Hortex Blackberry 300ml (Czarna Porzeczka),1,4
