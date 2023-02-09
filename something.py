@@ -102,9 +102,9 @@ for index, row in t.iterrows():
 st.title('Data Analysis')
 st.text('This is a web app to explore purchasing data, and see some visual data of the processes.')
 
-text = 'total revenue ===', totalrev
+text = ('total revenue ===', totalrev)
 st.write(text)
-text = "total profit ===", totalprofit
+text = ("total profit ===", totalprofit)
 st.text(text)
 
 st.write(itemxprofit)
