@@ -104,8 +104,8 @@ st.text('This is a web app to explore purchasing data, and see some visual data 
 
 text = 'total revenue ==='
 st.write(text, totalrev)
-text = ("total profit ===", totalprofit)
-st.text(text)
+text = "total profit ==="
+st.text(text, totalprofit)
 
 st.write(itemxprofit)
 
