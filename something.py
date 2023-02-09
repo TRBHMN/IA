@@ -70,7 +70,7 @@ for index, row in t.iterrows():
     b = row['quantity_bought']
     g = findprofit(a,x,b)
     t.loc[index, 'profit'] = g
-    totalprofit += g
+    totalprofit = totalprofit + g
 
 itemxprofit = items
 itemxprofit['profit'] = 0
