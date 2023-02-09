@@ -39,7 +39,7 @@ conn.close()
 
 def findrev(x):
     for index, row in items.iterrows():
-        if x == index:
+        if x == row['name']:
             c = row['price_sold']
     return c
 
@@ -47,17 +47,17 @@ for index, row in total.iterrows():
     x = row['item']
     if row['quantity_bought'] == 0:
         total.loc[index, 'quantity_bought'] = 1
-    if row['rev'] == 0:
-        total.loc[index, 'rev'] = findrev(x)
+    if row['revenue'] == 0:
+        total.loc[index, 'revenue'] = findrev(x)
 
 totalrev=0
-for tr in total['rev']:
+for tr in total['revenue']:
     totalrev = totalrev +tr
 
-def findprofit(a,x,b,y):
+def findprofit(a,x,b):
     profit = 0
-    for index, row in y.iterrows():
-        if x == index:
+    for index, row in items.iterrows():
+        if x == row['name']:
             c = row['og_price']
             profit = (a - (b*c))
     return profit
@@ -67,10 +67,11 @@ t = total
 t['profit'] = 0
 for index, row in t.iterrows():
     x = row['item']
-    a = row['rev']
+    a = row['revenue']
     b = row['quantity_bought']
-    t.loc[index, 'profit'] = findprofit(a,x,b,table1)
-    totalprofit += findprofit(a,x,b,table1)
+    g = findprofit(a,x,b)
+    t.loc[index, 'profit'] = g
+    totalprofit += g
 
 itemxprofit = items
 itemxprofit['profit'] = 0
