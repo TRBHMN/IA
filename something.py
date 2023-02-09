@@ -79,7 +79,7 @@ puprofit = 0
 for index, row in itemxprofit.iterrows():
     x = index
     for index, row in t.iterrows():
-        if x == row['item']:
+        if x == index:
             c = row['profit']
             puprofit += c
     itemxprofit.loc[x, 'profit'] = puprofit
