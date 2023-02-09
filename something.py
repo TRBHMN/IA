@@ -30,18 +30,17 @@ for result in results:
     # print(result)
     lis2.append(result)
 items = pd.DataFrame.from_dict(lis2)
-items.set_index("name")
+items = items.set_index("name")
 
 # Close the cursor and connection
 cursor.close()
 conn.close()
 
-
 def findrev(x):
     for index, row in items.iterrows():
         if x == index:
             c = row['price_sold']
-    return c
+            return c
 
 for index, row in total.iterrows():
     x = row['item']
@@ -57,10 +56,10 @@ for tr in total['revenue']:
 def findprofit(a,x,b):
     profit = 0
     for index, row in items.iterrows():
-        if x == row['name']:
+        if x == index:
             c = row['og_price']
             profit = (a - (b*c))
-    return profit
+            return profit
 
 totalprofit = 0
 t = total
