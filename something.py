@@ -49,7 +49,7 @@ for index, row in total.iterrows():
     if row['revenue'] == 0:
         total.loc[index, 'revenue'] = findrev(x)
 
-totalrev=0
+totalrev= 0 
 for tr in total['revenue']:
     totalrev = totalrev +tr
 
@@ -102,10 +102,12 @@ for index, row in t.iterrows():
 st.title('Data Analysis')
 st.text('This is a web app to explore purchasing data, and see some visual data of the processes.')
 
-st.text('total revenue ===', totalrev)
-st.text("total profit ===", totalprofit)
+text = 'total revenue ===', totalrev
+st.write(text)
+text = "total profit ===", totalprofit
+st.text(text)
 
-st.write(itemxprofit.head(100))
+st.write(itemxprofit)
 
 
 
