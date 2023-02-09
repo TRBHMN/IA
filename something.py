@@ -50,7 +50,7 @@ for index, row in total.iterrows():
         total.loc[index, 'revenue'] = findrev(x)
 
 totalrev= 0 
-for index, rows in total['revenue']:
+for index, rows in total:
     totalrev = totalrev + row['revenue']
 
 def findprofit(a,x,b):
