@@ -59,18 +59,19 @@ def findprofit(a,x,b):
         if x == index:
             c = row['og_price']
             profit = (a - (b*c))
-            return profit
+    return profit
 
-totalprofit = 0
+totalprofit = 0.00
 t = total
 t['profit'] = 0
 for index, row in t.iterrows():
     x = row['item']
     a = row['revenue']
     b = row['quantity_bought']
-    g = findprofit(a,x,b)
+    g = float(findprofit(a,x,b))
     t.loc[index, 'profit'] = g
     totalprofit = totalprofit + g
+
 
 itemxprofit = items
 itemxprofit['profit'] = 0
