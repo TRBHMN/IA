@@ -39,7 +39,7 @@ conn.close()
 
 def findrev(x):
     for index, row in items.iterrows():
-        if x == row['name']:
+        if x == index:
             c = row['price_sold']
     return c
 
