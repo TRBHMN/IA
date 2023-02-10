@@ -93,7 +93,8 @@ for index, row in t.iterrows():
             itemxprofit.at[index, 'bought'] += c
 
 totalrev= 0 
-for index, rows in total.iterrows():
+totalprofit = 0
+for index, rows in t.iterrows():
     totalrev = totalrev + row['revenue']
 for index, rows in t.iterrows():
     totalprofit = totalprofit + row['profit']
