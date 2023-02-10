@@ -42,39 +42,37 @@ conn.close()
 #             c = row['price_sold']
 #             return c
 
-def findprofit(a,x,b):
-    profit = 0
-    for index, row in items.iterrows():
-        if x == index:
-            c = row['og_price']
-            profit = (a - (b*c))
-    return profit
-    
+
 for index, row in total.iterrows():
     x = row['item']
+    y = index
     if row['quantity_bought'] == 0:
         total.loc[index, 'quantity_bought'] = 1
     if row['revenue'] == 0:
         for index, row in items.iterrows():
-            if x == index:
+            if index == x:
                 c = row['price_sold']
-        total.loc[index, 'revenue'] = c
+                total.loc[y, 'revenue'] = c
 
 totalrev= 0 
 for index, rows in total.iterrows():
     totalrev = totalrev + row['revenue']
 
-
 totalprofit = 0.00
 t = total
 t['profit'] = 0
+profit = 0
 for index, row in t.iterrows():
     x = row['item']
     a = row['revenue']
     b = row['quantity_bought']
-    g = float(findprofit(a,x,b))
-    t.loc[index, 'profit'] = g
-    totalprofit = round((totalprofit + g), 2)
+    for index, row in items.iterrows():
+        if x == index:
+            c = row['og_price']
+            profit = (a - (b*c))
+            print(profit)
+    t.loc[index, 'profit'] = profit
+    totalprofit += profit
 
 
 
