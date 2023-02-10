@@ -70,7 +70,8 @@ for index, row in t.iterrows():
     b = row['quantity_bought']
     g = float(findprofit(a,x,b))
     t.loc[index, 'profit'] = g
-    totalprofit = totalprofit + g
+    totalprofit = round((totalprofit + g), 2)
+
 
 
 itemxprofit = items
