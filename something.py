@@ -54,15 +54,13 @@ for index, row in total.iterrows():
                 c = row['price_sold']
                 total.loc[y, 'revenue'] = c
 
-totalrev= 0 
-for index, rows in total.iterrows():
-    totalrev = totalrev + row['revenue']
 
-totalprofit = 0.00
+
 t = total
 t['profit'] = 0
 profit = 0
 for index, row in t.iterrows():
+    y = index
     x = row['item']
     a = row['revenue']
     b = row['quantity_bought']
@@ -70,11 +68,7 @@ for index, row in t.iterrows():
         if x == index:
             c = row['og_price']
             profit = (a - (b*c))
-            print(profit)
-    t.loc[index, 'profit'] = profit
-    totalprofit += profit
-
-
+            t.loc[y, 'profit'] = profit
 
 itemxprofit = items
 itemxprofit['profit'] = 0
@@ -97,6 +91,13 @@ for index, row in t.iterrows():
     for index, row in itemxprofit.iterrows():
         if index == x:
             itemxprofit.at[index, 'bought'] += c
+
+totalrev= 0 
+for index, rows in total.iterrows():
+    totalrev = totalrev + row['revenue']
+for index, rows in t.iterrows():
+    totalprofit = totalprofit + row['profit']
+
 
 
 
