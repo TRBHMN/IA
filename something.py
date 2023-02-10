@@ -48,6 +48,7 @@ for index, row in total.iterrows():
         total.loc[index, 'quantity_bought'] = 1
     if row['revenue'] == 0:
         total.loc[index, 'revenue'] = findrev(x)
+        st.write(row['revenue'])
 
 totalrev= 0 
 for index, rows in total.iterrows():
