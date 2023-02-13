@@ -145,6 +145,19 @@ for index, row in o.iterrows():
 x = o.groupby(['date'])['profit'].sum()
 x = x.sort_index(ascending=True)
 
+st.write("Profit over time is displayed here. Where it is the profit over every day that we have sold so far")
 st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
+
+
+fig = plt.figure(figsize=(10, 4))
+sns.barplot(x='id',y='bought',data=itemxprofit)
+st.pyplot(fig)
+
+fig = plt.figure(figsize=(10, 4))
+sns.distplot(itemxprofit['profit'], kde=True)
+st.pyplot(fig)
+
+
+
 
 # https://www.youtube.com/watch?v=VqgUkExPvLY - interesting video which might be able to help with the code.
