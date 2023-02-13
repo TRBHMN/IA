@@ -123,7 +123,14 @@ def label_point(x, y, val, ax):
 
 label_point(itemxprofit[itemxprofit.profit.between(50, 40000)].bought, itemxprofit[itemxprofit.profit.between(50, 40000)].profit, itemxprofit[itemxprofit.profit.between(50, 40000)].id, plt.gca())  
 
-st.text("All products, and how many are bought, versus the profit they produce")
+st.text("All products, and how many are bought, versus the profit they produce, of only the profit above 50")
+st.pyplot(fig)
+
+sns.barplot(x='id',y='bought',data=itemxprofit)
+st.pyplot(fig)
+
+st.text("Histogram of all of the products")
+sns.distplot(itemxprofit['profit'], kde=True)
 st.pyplot(fig)
 
 # https://www.youtube.com/watch?v=VqgUkExPvLY - interesting video which might be able to help with the code.
