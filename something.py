@@ -73,6 +73,7 @@ for index, row in t.iterrows():
 
 itemxprofit = items
 itemxprofit['profit'] = 0
+itemxprofit['revenue'] = 0
 puprofit = 0
 
 for index, row in itemxprofit.iterrows():
@@ -80,7 +81,9 @@ for index, row in itemxprofit.iterrows():
     for index, row in t.iterrows():
         if x == row['item']:
             c = t.loc[index, 'profit']
+            y = t.loc[index, 'revenue']
             itemxprofit.at[x, 'profit'] += c
+            itemxprofit.at[x, 'revenue'] += y
 
 itemxprofit['bought'] = 0
 
@@ -156,6 +159,14 @@ st.pyplot(fig)
 fig = plt.figure(figsize=(10, 4))
 sns.distplot(itemxprofit['profit'], kde=True)
 st.pyplot(fig)
+
+pick = st.radio('Pick a y axis determinant', ('Profit per product','Revenue per product','Amount of things bought per product'))
+
+if pick == 'Profit per product':
+    y_axis = ['profit']
+
+if pick == 'Profit per product':
+    y_axis = ['revenue']
 
 
 
