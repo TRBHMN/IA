@@ -116,7 +116,7 @@ st.write(text, totalprofit)
 with st.container():
     st.write(itemxprofit)
 
-st.header("Analysis")
+st.markdown("<h2 style='text-align: left; color: white;'>Graphs</h2>", unsafe_allow_html=True)
 fig = plt.figure(figsize=(10, 4))
 sns.scatterplot(x='bought', y='profit',hue='type', data = itemxprofit[itemxprofit.profit.between(50, 40000)])
 
@@ -152,10 +152,11 @@ st.write("Profit over time is displayed here. Where it is the profit over every 
 st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
 
 
-fig = plt.figure(figsize=(10, 4))
-sns.barplot(x='id',y='bought',data=itemxprofit[itemxprofit['bought']>10])
-st.pyplot(fig)
+# fig = plt.figure(figsize=(10, 4))
+# sns.barplot(x='id',y='bought',data=itemxprofit[itemxprofit['bought']>10])
+# st.pyplot(fig)
 
+st.write("Over here, we have the distribution of products and how many of they are in the zone where they do not produce enough profit, and the density of that location")
 fig = plt.figure(figsize=(10, 4))
 sns.distplot(itemxprofit['profit'], kde=True)
 st.pyplot(fig)
