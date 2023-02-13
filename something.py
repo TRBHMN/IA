@@ -164,7 +164,7 @@ pick = st.radio('Pick a y axis determinant', ('Profit per product','Revenue per 
 
 if pick == 'Profit per product':
     y_axis = 'profit'
-elif pick == 'Profit per product':
+elif pick == 'Revenue per product':
     y_axis = 'revenue'
 elif pick == 'Amount of things bought per product':
     y_axis = 'bought'
