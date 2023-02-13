@@ -169,7 +169,7 @@ elif pick == 'Profit per product':
 elif pick == 'Amount of things bought per product':
     y_axis = 'bought'
 
-pick2 = st.radio('Pick a x axis determinant', ('Type of product (Snack, Drink, Utility)','Date','Original price of the product','Price that the product is sold at', 'Profit per product','Revenue per product','Amount of things bought per product'))
+pick2 = st.radio('Pick a x axis determinant', ('Type of product (Snack, Drink, Utility)','Original price of the product','Price that the product is sold at', 'Profit per product','Revenue per product','Amount of things bought per product'))
 if pick2 == 'Profit per product':
     x_axis = 'profit'
 elif pick2 == 'Profit per product':
@@ -178,8 +178,6 @@ elif pick2 == 'Amount of things bought per product':
     x_axis = 'bought'
 elif pick2 == 'Type of product (Snack, Drink, Utility)':
     x_axis = 'type'
-elif pick2 == 'Date':
-    x_axis = 'date'
 elif pick2 == 'Price that the product is sold at':
     x_axis = 'price_sold'
 elif pick2 == "Original price of the product":
@@ -193,7 +191,8 @@ if result:
         st.write('Bar graph, ', x_axis, " vs, ", y_axis)
         pro = itemxprofit.groupby([x_axis])[y_axis].sum().to_frame()
         st.bar_chart(data=pro, x = index, y= [y_axis])
-    if pick3 == "Line Grap67]h":
+    if pick3 == "Line Graph":
+        st.write('Line graph, ', x_axis, " vs, ", y_axis)
         st.line_chart(data=itemxprofit, x = [x_axis], y= [y_axis])
 # if pick3 == 'Scatterplot':
 
