@@ -109,6 +109,7 @@ st.write(text, totalrev)
 text = "total profit ==="
 st.write(text, totalprofit)
 
+st.write(t)
 st.write(itemxprofit)
 
 
