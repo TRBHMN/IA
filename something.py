@@ -112,8 +112,8 @@ st.write(text, totalprofit)
 st.write(itemxprofit)
 
 st.header("Analysis")
-
-ax = sns.scatterplot(x='bought', y='profit',hue='type', data = itemxprofit[itemxprofit.profit.between(50, 40000)])
+fig = plt.figure(figsize=(10, 4))
+sns.scatterplot(x='bought', y='profit',hue='type', data = itemxprofit[itemxprofit.profit.between(50, 40000)])
 ax.set(title='Bought vs Profit')
 
 def label_point(x, y, val, ax):
@@ -124,6 +124,6 @@ def label_point(x, y, val, ax):
 label_point(itemxprofit[itemxprofit.profit.between(50, 40000)].bought, itemxprofit[itemxprofit.profit.between(50, 40000)].profit, itemxprofit[itemxprofit.profit.between(50, 40000)].id, plt.gca())  
 
 st.text("All products, and how many are bought, versus the profit they produce")
-st.plotly_chart(ax, use_container_width= True)
+st.pyplot(fig)
 
 # https://www.youtube.com/watch?v=VqgUkExPvLY - interesting video which might be able to help with the code.
