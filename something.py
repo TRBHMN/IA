@@ -96,7 +96,6 @@ totalrev= 0
 totalprofit = 0
 for index, rows in t.iterrows():
     totalrev = totalrev + row['revenue']
-for index, rows in t.iterrows():
     totalprofit = totalprofit + row['profit']
 
 
