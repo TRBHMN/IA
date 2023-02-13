@@ -110,8 +110,8 @@ st.write(text, totalrev)
 text = "total profit ==="
 st.write(text, totalprofit)
 
-c = st.container
-c.write(itemxprofit)
+with st.container():
+    st.write(itemxprofit)
 
 st.header("Analysis")
 fig = plt.figure(figsize=(10, 4))
