@@ -191,8 +191,8 @@ result = st.button("Click here to make the graph")
 if result:
     if pick3 == "Bar graph":
         st.write('Bar graph, ', x_axis, " vs, ", y_axis)
-        y = itemxprofit.grouby(x_axis)[y_axis]
-        st.bar_chart(data=y, x = [x_axis], y= [y_axis])
+        pro = itemxprofit.grouby(x_axis)[y_axis]
+        st.bar_chart(data=pro, x = [x_axis], y= [y_axis])
     if pick3 == "Line Graph":
         st.line_chart(data=itemxprofit, x = [x_axis], y= [y_axis])
 # if pick3 == 'Scatterplot':
