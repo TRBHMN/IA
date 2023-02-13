@@ -170,17 +170,17 @@ elif pick == 'Amount of things bought per product':
     y_axis = ['bought']
 
 pick2 = st.radio('Pick a x axis determinant', ('Type of product (Snack, Drink, Utility)','Date','Original price of the product','Price that the product is sold at', 'Profit per product','Revenue per product','Amount of things bought per product'))
-if pick == 'Profit per product':
+if pick2 == 'Profit per product':
     x_axis = ['profit']
-elif pick == 'Profit per product':
+elif pick2 == 'Profit per product':
     x_axis = ['revenue']
-elif pick == 'Amount of things bought per product':
+elif pick2 == 'Amount of things bought per product':
     x_axis = ['bought']
-elif pick == 'Type of product (Snack, Drink, Utility)':
+elif pick2 == 'Type of product (Snack, Drink, Utility)':
     x_axis = ['type']
-elif pick == 'Date':
+elif pick2 == 'Date':
     x_axis = ['date']
-elif pick == 'Price that the product is sold at':
+elif pick2 == 'Price that the product is sold at':
     x_axis = ['price_sold']
 elif pick2 == "Original price of the product":
     x_axis = ['og_price']
