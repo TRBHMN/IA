@@ -163,27 +163,27 @@ st.pyplot(fig)
 pick = st.radio('Pick a y axis determinant', ('Profit per product','Revenue per product','Amount of things bought per product'))
 
 if pick == 'Profit per product':
-    y_axis = ['profit']
+    y_axis = 'profit'
 elif pick == 'Profit per product':
-    y_axis = ['revenue']
+    y_axis = 'revenue'
 elif pick == 'Amount of things bought per product':
-    y_axis = ['bought']
+    y_axis = 'bought'
 
 pick2 = st.radio('Pick a x axis determinant', ('Type of product (Snack, Drink, Utility)','Date','Original price of the product','Price that the product is sold at', 'Profit per product','Revenue per product','Amount of things bought per product'))
 if pick2 == 'Profit per product':
-    x_axis = ['profit']
+    x_axis = 'profit'
 elif pick2 == 'Profit per product':
-    x_axis = ['revenue']
+    x_axis = 'revenue'
 elif pick2 == 'Amount of things bought per product':
-    x_axis = ['bought']
+    x_axis = 'bought'
 elif pick2 == 'Type of product (Snack, Drink, Utility)':
-    x_axis = ['type']
+    x_axis = 'type'
 elif pick2 == 'Date':
-    x_axis = ['date']
+    x_axis = 'date'
 elif pick2 == 'Price that the product is sold at':
-    x_axis = ['price_sold']
+    x_axis = 'price_sold'
 elif pick2 == "Original price of the product":
-    x_axis = ['og_price']
+    x_axis = 'og_price'
 
 pick3 = st.radio('Pick the type of graph you would like to display', ("Bar graph", "Line Graph", 'Scatterplot'))
 
@@ -191,9 +191,10 @@ result = st.button("Click here to make the graph")
 if result:
     if pick3 == "Bar graph":
         st.write('Bar graph, ', x_axis, " vs, ", y_axis)
-        st.bar_chart(data=itemxprofit, x = x_axis, y= y_axis)
+        itemxprofit.grouby(x_axis)[y_axis]
+        st.bar_chart(data=itemxprofit, x = [x_axis], y= [y_axis])
     if pick3 == "Line Graph":
-        st.line_chart(data=itemxprofit, x = x_axis, y= y_axis)
+        st.line_chart(data=itemxprofit, x = [x_axis], y= [y_axis])
 # if pick3 == 'Scatterplot':
 
 
