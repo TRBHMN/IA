@@ -78,7 +78,7 @@ for index, row in itemxprofit.iterrows():
     x = index
     for index, row in t.iterrows():
         if x == index:
-            c = row['profit']
+            c = t.loc[index, 'profit']
             itemxprofit.at[x, 'profit'] += c
 
 itemxprofit['bought'] = 0
