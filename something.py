@@ -115,8 +115,6 @@ st.write(itemxprofit)
 st.header("Analysis")
 fig = plt.figure(figsize=(10, 4))
 sns.scatterplot(x='bought', y='profit',hue='type', data = itemxprofit[itemxprofit.profit.between(50, 40000)])
-title('My title','FontSize',16)
-xlabel('My label','FontSize',10) 
 
 def label_point(x, y, val, ax):
     a = pd.concat({'x': x, 'y': y, 'val': val}, axis=1)
@@ -151,7 +149,7 @@ st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_wi
 
 
 fig = plt.figure(figsize=(10, 4))
-sns.barplot(x='id',y='bought',data=itemxprofit)
+sns.barplot(x='id',y='bought',data=itemxprofit[itemxprofit['bought']>10])
 st.pyplot(fig)
 
 fig = plt.figure(figsize=(10, 4))
