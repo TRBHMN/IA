@@ -163,27 +163,27 @@ st.pyplot(fig)
 pick = st.radio('Pick a y axis determinant', ('Profit per product','Revenue per product','Amount of things bought per product'))
 
 if pick == 'Profit per product':
-    y_axis = 'profit'
+    y_axis = ['profit']
 if pick == 'Profit per product':
-    y_axis = 'revenue'
+    y_axis = ['revenue']
 if pick == 'Amount of things bought per product':
-    y_axis = 'bought'
+    y_axis = ['bought']
 
 pick2 = st.radio('Pick a x axis determinant', ('Type of product (Snack, Drink, Utility)','Date','Original price of the product','Price that the product is sold at', 'Profit per product','Revenue per product','Amount of things bought per product'))
 if pick == 'Profit per product':
-    x_axis = 'profit'
+    x_axis = ['profit']
 if pick == 'Profit per product':
-    x_axis = 'revenue'
+    x_axis = ['revenue']
 if pick == 'Amount of things bought per product':
-    x_axis = 'bought'
+    x_axis = ['bought']
 if pick == 'Type of product (Snack, Drink, Utility)':
-    x_axis = 'type'
+    x_axis = ['type']
 if pick == 'Date':
-    x_axis = 'date'
+    x_axis = ['date']
 if pick == 'Price that the product is sold at':
-    x_axis = 'price_sold'
+    x_axis = ['price_sold']
 if pick2 == "Original price of the product":
-    x_axis = 'og_price'
+    x_axis = ['og_price']
 
 pick3 = st.radio('Pick the type of graph you would like to display', ("Bar graph", "Line Graph", 'Scatterplot'))
 
