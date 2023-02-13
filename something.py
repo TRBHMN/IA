@@ -134,6 +134,7 @@ st.pyplot(fig)
 # st.pyplot(fig)
 
 x = total.groupby(['date'])['profit'].sum()
+x = x.sort_index(ascending=False)
 
 st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
 
