@@ -124,7 +124,7 @@ def label_point(x, y, val, ax):
 
 label_point(itemxprofit[itemxprofit.profit.between(50, 40000)].bought, itemxprofit[itemxprofit.profit.between(50, 40000)].profit, itemxprofit[itemxprofit.profit.between(50, 40000)].id, plt.gca())  
 
-st.text("All products, and how many are bought, versus the profit they produce, of only the profit above 50")
+st.write("All products, and how many are bought, versus the profit they produce, of only the profit above 50")
 st.pyplot(fig)
 
 # sns.barplot(x='id',y='bought',data=itemxprofit)
