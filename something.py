@@ -95,8 +95,8 @@ for index, row in t.iterrows():
 totalrev= 0 
 totalprofit = 0
 for index, rows in t.iterrows():
-    totalrev = totalrev + row['revenue']
-    totalprofit = totalprofit + row['profit']
+    totalrev = totalrev + t.loc[index,'revenue']
+    totalprofit = totalprofit + t.loc[index,'profit']
 
 
 
