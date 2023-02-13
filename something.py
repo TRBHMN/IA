@@ -105,7 +105,7 @@ for index, rows in t.iterrows():
 
 
 # Add a title and intro text
-st.title('Data Analysis')
+st.markdown("<h1 style='text-align: center; color: red;'>Data Analysis</h1>", unsafe_allow_html=True)
 st.text('This is a web app to explore purchasing data, and see some visual data of the processes.')
 
 text = 'total revenue ==='
@@ -160,35 +160,31 @@ fig = plt.figure(figsize=(10, 4))
 sns.distplot(itemxprofit['profit'], kde=True)
 st.pyplot(fig)
 
-pick = st.radio('Pick a y axis determinant', ('Profit per product','Revenue per product','Amount of things bought per product'))
+col1, col2 = st.columns(2)
 
-if pick == 'Profit per product':
-    y_axis = 'profit'
-elif pick == 'Revenue per product':
-    y_axis = 'revenue'
-elif pick == 'Amount of things bought per product':
-    y_axis = 'bought'
+with col1:
+    pick = st.radio('Pick a y axis determinant', ('Profit per product','Revenue per product','Amount of things bought per product'))
 
-pick2 = st.radio('Pick a x axis determinant', ('Type of product (Snack, Drink, Utility)','Item'))
-if pick2 == 'Item':
-    x_axis = 'name'
-elif pick2 == 'Type of product (Snack, Drink, Utility)':
-    x_axis = 'type'
+    if pick == 'Profit per product':
+        y_axis = 'profit'
+    elif pick == 'Revenue per product':
+        y_axis = 'revenue'
+    elif pick == 'Amount of things bought per product':
+        y_axis = 'bought'
 
+with col2:
+    pick2 = st.radio('Pick a x axis determinant', ('Type of product (Snack, Drink, Utility)','Item'))
+    if pick2 == 'Item':
+        x_axis = 'name'
+    elif pick2 == 'Type of product (Snack, Drink, Utility)':
+        x_axis = 'type'
 
-pick3 = st.radio('Pick the type of graph you would like to display', ("Bar graph", "Line Graph", 'Scatterplot'))
-
-result = st.button("Click here to make the graph")
-if result:
-    if pick3 == "Bar graph":
+with st.container():
+    result = st.button("Click here to make the graph")
+    if result:
         st.write('Bar graph, ', x_axis, " vs, ", y_axis)
         pro = itemxprofit.groupby([x_axis])[y_axis].sum().to_frame()
         st.bar_chart(data=pro, x = index, y= [y_axis])
-    if pick3 == "Line Graph":
-        st.write('Line graph, ', x_axis, " vs, ", y_axis)
-        st.line_chart(data=itemxprofit, x = [x_axis], y= [y_axis])
-# if pick3 == 'Scatterplot':
-
 
 
 
