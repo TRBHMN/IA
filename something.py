@@ -163,7 +163,7 @@ st.pyplot(fig)
 pick = st.radio('Pick a y axis determinant', ('Profit per product','Revenue per product','Amount of things bought per product'))
 
 if pick == 'Profit per product':
-    y_axis = 'profit'
+    y_axis = ['profit']
 elif pick == 'Profit per product':
     y_axis = 'revenue'
 elif pick == 'Amount of things bought per product':
@@ -177,7 +177,7 @@ elif pick2 == 'Profit per product':
 elif pick2 == 'Amount of things bought per product':
     x_axis = 'bought'
 elif pick2 == 'Type of product (Snack, Drink, Utility)':
-    x_axis = 'type'
+    x_axis = ['type']
 elif pick2 == 'Date':
     x_axis = 'date'
 elif pick2 == 'Price that the product is sold at':
