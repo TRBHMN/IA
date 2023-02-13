@@ -169,15 +169,12 @@ elif pick == 'Profit per product':
 elif pick == 'Amount of things bought per product':
     y_axis = 'bought'
 
-pick2 = st.radio('Pick a x axis determinant', ('Type of product (Snack, Drink, Utility)','Original price of the product','Price that the product is sold at', 'Profit per product','Revenue per product','Amount of things bought per product'))
-if pick2 == 'Amount of things bought per product':
-    x_axis = 'bought'
+pick2 = st.radio('Pick a x axis determinant', ('Type of product (Snack, Drink, Utility)','Item'))
+if pick2 == 'Item':
+    x_axis = 'name'
 elif pick2 == 'Type of product (Snack, Drink, Utility)':
     x_axis = 'type'
-elif pick2 == 'Price that the product is sold at':
-    x_axis = 'price_sold'
-elif pick2 == "Original price of the product":
-    x_axis = 'og_price'
+
 
 pick3 = st.radio('Pick the type of graph you would like to display', ("Bar graph", "Line Graph", 'Scatterplot'))
 
