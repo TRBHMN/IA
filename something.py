@@ -126,11 +126,13 @@ label_point(itemxprofit[itemxprofit.profit.between(50, 40000)].bought, itemxprof
 st.text("All products, and how many are bought, versus the profit they produce, of only the profit above 50")
 st.pyplot(fig)
 
-sns.barplot(x='id',y='bought',data=itemxprofit)
-st.pyplot(fig)
+# sns.barplot(x='id',y='bought',data=itemxprofit)
+# st.pyplot(fig)
 
-st.text("Histogram of all of the products")
-sns.distplot(itemxprofit['profit'], kde=True)
-st.pyplot(fig)
+# st.text("Histogram of all of the products")
+# sns.distplot(itemxprofit['profit'], kde=True)
+# st.pyplot(fig)
+
+st.line_chart(data=total, x=total['date'], y=total.groupby(['date'])['profit'].sum(), width=0, height=0, use_container_width=True)
 
 # https://www.youtube.com/watch?v=VqgUkExPvLY - interesting video which might be able to help with the code.
