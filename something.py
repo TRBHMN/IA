@@ -160,6 +160,8 @@ fig = plt.figure(figsize=(10, 4))
 sns.distplot(itemxprofit['profit'], kde=True)
 st.pyplot(fig)
 
+st.markdown("<h2 style='text-align: left; color: white;'>Make your own graph</h2>", unsafe_allow_html=True)
+
 col1, col2 = st.columns(2)
 
 with col1:
