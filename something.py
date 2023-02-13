@@ -187,9 +187,9 @@ if pick2 == "Original price of the product":
 
 pick3 = st.radio('Pick the type of graph you would like to display', ("Bar graph", "Line Graph", 'Scatterplot'))
 if pick3 == 'Bar Graph':
-    st.bar_chart(itemxprofit, x = x_axis, y= y_axis)
+    st.bar_chart(data=itemxprofit, x = x_axis, y= y_axis)
 if pick3 == "Line Graph":
-    st.line_chart(itemxprofit, x = x_axis, y= y_axis)
+    st.line_chart(data=itemxprofit, x = x_axis, y= y_axis)
 # if pick3 == 'Scatterplot':
 
 
