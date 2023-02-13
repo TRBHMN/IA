@@ -133,6 +133,8 @@ st.pyplot(fig)
 # sns.distplot(itemxprofit['profit'], kde=True)
 # st.pyplot(fig)
 
-st.line_chart(data=total.groupby(['date'])['profit'].sum(), x=total['date'], y=['profit'], width=0, height=0, use_container_width=True)
+x = total.groupby(['date'])['profit'].sum()
+
+st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
 
 # https://www.youtube.com/watch?v=VqgUkExPvLY - interesting video which might be able to help with the code.
