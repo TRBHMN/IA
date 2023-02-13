@@ -132,9 +132,16 @@ st.pyplot(fig)
 # st.text("Histogram of all of the products")
 # sns.distplot(itemxprofit['profit'], kde=True)
 # st.pyplot(fig)
+o = total
+for index, row in o.iterrows():
+    x = row['date']
+    date = datetime.datetime.strptime(x, date_format)
+    new_format = "%B %d"
+    new_date_string = date.strftime(new_format)
+    o.loc[index, 'date'] = new_date_string
 
-x = total.groupby(['date'])['profit'].sum()
-x = x.sort_index(ascending=False)
+x = o.groupby(['date'])['profit'].sum()
+x = x.sort_index(ascending=True)
 
 st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
 
