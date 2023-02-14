@@ -135,10 +135,10 @@ with colum2:
     ID_search = st.button("Search in ID Number")
 
 #Table
-def search(x, selected):
+def search(selected):
     max_similarity = 0
     max_similarity_string = ''
-    for string in itemxprofit[x]:
+    for string in itemxprofit.index:
         similarity = SequenceMatcher(None, selected, string).ratio()
         if similarity > max_similarity:
             max_similarity = similarity
@@ -150,7 +150,7 @@ with st.container():
         st.write(itemxprofit)
     if selected != "":
         if name_search:
-            y = search(index, selected)
+            y = search(selected)
             st.write(itemxprofit[itemxprofit.index == y])
         elif ID_search:
             st.write(itemxprofit[itemxprofit['id'] == selected])
