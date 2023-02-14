@@ -70,8 +70,8 @@ with st.sidebar:
             if sent:
                 cursor = conn.cursor()
                 new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
-                sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
-                cursor.execute(sql, new_item)
+                query = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
+                cursor.execute("INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)", (add_name, IDn, add_price_sold, typ, add_og_price))
                 cursor.close()
                 connection.close()
                 st.write(add_name)
