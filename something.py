@@ -62,8 +62,9 @@ with st.sidebar:
                 for index, row in items.iterrows():
                     maxi = 0
                     IDn = 0
-                    if row['id'] > maxi:
-                        maxi = row['id']
+                    x = row['id']
+                    if x > maxi:
+                        maxi = x
                         IDn = int((maxi + 1))
                 cursor = conn.cursor()
                 new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
