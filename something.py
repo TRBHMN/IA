@@ -44,32 +44,33 @@ items = items.set_index("name")
 with st.sidebar:
     add_item = st.button("Would you like to add a new item?")
     if add_item:
-        add_type = st.radio(
-            "Choose the type of product it would be...",
-            ("Snack", "Drink", "Utility"))
-        if add_type == "Snack":
-            typ = 'snacks'
-        elif add_type == "Drink":
-            typ = 'drinks'
-        elif add_type == "Utility":
-            typ = 'utilities'
-        add_name = st.text_input("", "Name of product?")
-        add_og_price = st.text_input("", "Price of product?")
-        add_price_sold = st.text_input("", "Price sold of product?")
-        send = st.button("Publish/Send off")
-        if send:
-            for index, row in items.iterrows():
-                maxi = 0
-                IDn = 0
-                if row['id'] > maxi:
-                    maxi = row['id']
-                    IDn = maxi + 1
-            cursor = conn.cursor()
-            new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
-            sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
-            cursor.execute(sql, new_item)
-            cursor.close()
-            connection.close()
+        with st.form("my_form"):
+            add_type = st.radio(
+                "Choose the type of product it would be...",
+                ("Snack", "Drink", "Utility"))
+            if add_type == "Snack":
+                typ = 'snacks'
+            elif add_type == "Drink":
+                typ = 'drinks'
+            elif add_type == "Utility":
+                typ = 'utilities'
+            add_name = st.text_input("", "Name of product?")
+            add_og_price = st.text_input("", "Price of product?")
+            add_price_sold = st.text_input("", "Price sold of product?")
+            sent = st.st.form_submit_button("Publish/Send off")
+            if sent:
+                for index, row in items.iterrows():
+                    maxi = 0
+                    IDn = 0
+                    if row['id'] > maxi:
+                        maxi = row['id']
+                        IDn = maxi + 1
+                cursor = conn.cursor()
+                new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
+                sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
+                cursor.execute(sql, new_item)
+                cursor.close()
+                connection.close()
 
 
 
