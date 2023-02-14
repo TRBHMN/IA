@@ -55,8 +55,8 @@ with st.sidebar:
             elif add_type == "Utility":
                 typ = 'utilities'
             add_name = str(st.text_input("", "Name of product?"))
-            add_og_price = str(st.text_input("", "Price of product?"))
-            add_price_sold = str(st.text_input("", "Price sold of product?"))
+            add_og_price = int(st.text_input("", "Price of product?"))
+            add_price_sold = int(st.text_input("", "Price sold of product?"))
             sent = st.form_submit_button("Publish/Send off")
             if sent:
                 for index, row in items.iterrows():
@@ -64,13 +64,16 @@ with st.sidebar:
                     IDn = 0
                     if row['id'] > maxi:
                         maxi = row['id']
-                        IDn = str((maxi + 1))
+                        IDn = int((maxi + 1))
                 cursor = conn.cursor()
                 new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
-                sql = "INSERT INTO 'items' ('name', 'id', 'price_sold', 'type', 'og_price') VALUES (%s, %s, %s, %s, %s)"
+                sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
                 cursor.execute(sql, new_item)
                 cursor.close()
                 connection.close()
+                st.write(add_name)
+                st.write(add_price_sold)
+                st.write(add_og_price)
 
 
 
