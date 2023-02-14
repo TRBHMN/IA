@@ -6,8 +6,10 @@ body {
 .stButton>button {
     color: #4F8BF9;
     border-radius: 50%;
-    height: 10em;
-    width: 10em;
+    height: 5em;
+    width: 20em;
+    text-align: center;
+
 }
 
 .stTextInput>div>div>input {
