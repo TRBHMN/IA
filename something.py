@@ -127,7 +127,13 @@ remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
 
 icon("search")
 selected = st.text_input("", "Search...")
-button_clicked = st.button("OK")
+colum1, colum2 = st.columns(2)
+with colum1:
+    name_search = st.button("Search in Product Names")
+with colum2:
+    ID_search = st.button("Search in ID Number")
+
+
 
 
 
