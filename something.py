@@ -135,23 +135,21 @@ with colum2:
     ID_search = st.button("Search in ID Number")
 
 #Table
-def search(selected):
-    max_similarity = 0
-    max_similarity_string = ''
-    for string in itemxprofit.index:
-        similarity = SequenceMatcher(None, selected, string).ratio()
-        if similarity > max_similarity:
-            max_similarity = similarity
-            max_similarity_string = string
-            return max_similarity_string
+
 
 with st.container():
-    if selected == "":
+    if selected == "ALL":
         st.write(itemxprofit)
     if selected != "":
         if name_search:
-            y = search(selected)
-            st.write(itemxprofit[itemxprofit.index == y])
+            max_similarity = 0
+            max_similarity_string = ''
+            for index, row in itemxprofit.iterrows():
+                similarity = SequenceMatcher(None, selected, index).ratio()
+                if similarity > max_similarity:
+                    max_similarity = similarity
+                    max_similarity_string = index
+            itemxprofit[itemxprofit.index == max_similarity_string]
         elif ID_search:
             st.write(itemxprofit[itemxprofit['id'] == selected])
 
