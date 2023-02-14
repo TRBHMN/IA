@@ -126,7 +126,11 @@ def icon(icon_name):
 local_css("style.css")
 remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
 
-icon("search")
+columm1, columm2 = st.columns(2, gap= "large")
+with columm1:
+    icon("search")
+with columm2:
+    st.write("Over here, you can search throughout the items, and find a specific product or another, if you want to look at all the products, and their statistics? Search ALL")
 selected = st.text_input("", "Search...")
 colum1, colum2 = st.columns(2, gap= "large")
 with colum1:
