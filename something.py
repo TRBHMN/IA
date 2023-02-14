@@ -61,7 +61,7 @@ with st.sidebar:
             add_price_sold = st.text_input("", "Price sold of product?")
             send = st.button("Publish/Send off")
             if send:
-                for index, row in items.iterrow():
+                for index, row in items.iterrows():
                     maxi = 0
                     IDn = 0
                     if row['id'] > maxi:
