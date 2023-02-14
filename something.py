@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pymysql.cursors
 import datetime 
+from difflib import SequenceMatcher
 sns.set(rc={'figure.figsize':(10,5)})
 
 lis = []
@@ -133,13 +134,26 @@ with colum1:
 with colum2:
     ID_search = st.button("Search in ID Number")
 
-
-
-
-
 #Table
+def search(x, selected):
+    max_similarity = 0
+    max_similarity_string = ''
+    for string in itemxprofit[x]:
+        similarity = SequenceMatcher(None, selected, string).ratio()
+        if similarity > max_similarity:
+            max_similarity = similarity
+            max_similarity_string = string
+            return max_similarity_string
+
 with st.container():
-    st.write(itemxprofit)
+    if selected == "":
+        st.write(itemxprofit)
+    if selected != "":
+        if name_search:
+            y = search(index, selected)
+            st.write(itemxprofit[itemxprofit.index == y])
+        elif ID_search:
+            st.write(itemxprofit[itemxprofit['id'] == selected])
 
 
 #Graphs
