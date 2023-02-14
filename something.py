@@ -68,8 +68,8 @@ with st.sidebar:
                         maxi = row['id']
                         IDn = maxi + 1
                 cursor = conn.cursor()
-                new_item = (typ, add_name, add_og_price, add_price_sold, IDn)
-                sql = "INSERT INTO items (type, name, og_price, price_sold, id) VALUES (%s, %s, %s, %s, %s)"
+                new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
+                sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
                 cursor.execute(sql, new_item)
                 connection.commit()
                 cursor.close()
