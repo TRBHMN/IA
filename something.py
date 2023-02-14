@@ -55,25 +55,24 @@ with st.sidebar:
             typ = 'drinks'
         elif add_type == "Utility":
             typ = 'utilities'
-        if add_type !="":
-            add_name = st.text_input("", "Name of product?")
-            add_og_price = st.text_input("", "Price of product?")
-            add_price_sold = st.text_input("", "Price sold of product?")
-            send = st.button("Publish/Send off")
-            if send:
-                for index, row in items.iterrows():
-                    maxi = 0
-                    IDn = 0
-                    if row['id'] > maxi:
-                        maxi = row['id']
-                        IDn = maxi + 1
-                cursor = conn.cursor()
-                new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
-                sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
-                cursor.execute(sql, new_item)
-                connection.commit()
-                cursor.close()
-                connection.close()
+        add_name = st.text_input("", "Name of product?")
+        add_og_price = st.text_input("", "Price of product?")
+        add_price_sold = st.text_input("", "Price sold of product?")
+        send = st.button("Publish/Send off")
+        if send:
+            for index, row in items.iterrows():
+                maxi = 0
+                IDn = 0
+                if row['id'] > maxi:
+                    maxi = row['id']
+                    IDn = maxi + 1
+            cursor = conn.cursor()
+            new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
+            sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
+            cursor.execute(sql, new_item)
+            connection.commit()
+            cursor.close()
+            connection.close()
 
 
 
