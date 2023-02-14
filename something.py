@@ -62,6 +62,7 @@ with st.sidebar:
                 typ = 'drinks'
             elif add_type == "Utility":
                 typ = 'utilities'
+            st.write(IDn)
             add_name = st.text_input("", "Name of product?")
             add_og_price = st.text_input("", "Price of product?")
             add_price_sold = st.text_input("", "Price sold of product?")
