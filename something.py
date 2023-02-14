@@ -43,6 +43,40 @@ conn.close()
 #             c = row['price_sold']
 #             return c
 
+with st.sidebar:
+    add_item = st.button("Would you like to add a new item?")
+    if add_item:
+        add_type = st.radio(
+            "Choose the type of product it would be...",
+            ("Snack", "Drink", "Utility"))
+        if add_type == "Snack":
+            typ = 'snacks'
+        elif add_type == "Drink":
+            typ = 'drinks'
+        elif add_type == "Utility":
+            typ = 'utilities'
+        if add_type !="":
+            add_name = st.text_input("", "Name of product?")
+            add_og_price = st.text_input("", "Price of product?")
+            add_price_sold = st.text_input("", "Price sold of product?")
+            if add_name != "Name of product?" and add_og_price != "Price of product?" and add_price_sold !="Price sold of product?":
+                for index, row, in items.iterrow():
+                    maxi = 0
+                    IDn = 0
+                    if row['id'] > maxi:
+                        maxi = row['id']
+                        IDn = maxi + 1
+                cursor = conn.cursor()
+                new_item = (typ, add_name, add_og_price, add_price_sold, IDn)
+                sql = "INSERT INTO items (type, name, og_price, price_sold, id) VALUES (%s, %s, %s, %s, %s)"
+                cursor.execute(sql, new_item)
+                connection.commit()
+                cursor.close()
+                connection.close()
+
+
+
+
 
 for index, row in total.iterrows():
     x = row['item']
