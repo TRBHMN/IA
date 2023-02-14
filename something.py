@@ -102,6 +102,16 @@ for index, rows in t.iterrows():
 
 # ANALYSIS
 
+
+st.markdown("<h1 style='text-align: center; color: red;'>Data Analysis</h1>", unsafe_allow_html=True)
+st.text('This is a web app to explore purchasing data, and see some visual data of the processes.')
+
+text = 'total revenue ==='
+st.write(text, totalrev)
+text = "total profit ==="
+st.write(text, totalprofit)
+
+# Search Bar
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
@@ -120,17 +130,13 @@ selected = st.text_input("", "Search...")
 button_clicked = st.button("OK")
 
 
-st.markdown("<h1 style='text-align: center; color: red;'>Data Analysis</h1>", unsafe_allow_html=True)
-st.text('This is a web app to explore purchasing data, and see some visual data of the processes.')
 
-text = 'total revenue ==='
-st.write(text, totalrev)
-text = "total profit ==="
-st.write(text, totalprofit)
-
+#Table
 with st.container():
     st.write(itemxprofit)
 
+
+#Graphs
 st.markdown("<h2 style='text-align: left; color: white;'>Graphs</h2>", unsafe_allow_html=True)
 fig = plt.figure(figsize=(10, 4))
 sns.scatterplot(x='bought', y='profit',hue='type', data = itemxprofit[itemxprofit.profit.between(50, 40000)])
