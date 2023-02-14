@@ -59,7 +59,8 @@ with st.sidebar:
             add_name = st.text_input("", "Name of product?")
             add_og_price = st.text_input("", "Price of product?")
             add_price_sold = st.text_input("", "Price sold of product?")
-            if add_name != "Name of product?" and add_og_price != "Price of product?" and add_price_sold !="Price sold of product?":
+            send = st.button("Publish/Send off")
+            if send:
                 for index, row, in items.iterrow():
                     maxi = 0
                     IDn = 0
