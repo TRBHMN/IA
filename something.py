@@ -41,6 +41,14 @@ items = items.set_index("name")
 #             c = row['price_sold']
 #             return c
 
+for index, row in items.iterrows():
+    maxi = 0
+    IDn = 0
+    x = row['id']
+    if x > maxi:
+        maxi = x
+        IDn = int((maxi + 1))
+
 with st.sidebar:
     add_item = st.button("Would you like to add a new item?")
     if add_item:
@@ -59,13 +67,6 @@ with st.sidebar:
             add_price_sold = st.text_input("", "Price sold of product?")
             sent = st.form_submit_button("Publish/Send off")
             if sent:
-                for index, row in items.iterrows():
-                    maxi = 0
-                    IDn = 0
-                    x = row['id']
-                    if x > maxi:
-                        maxi = x
-                        IDn = int((maxi + 1))
                 cursor = conn.cursor()
                 new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
                 sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
