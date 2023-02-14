@@ -34,8 +34,6 @@ items = pd.DataFrame.from_dict(lis2)
 items = items.set_index("name")
 
 # Close the cursor and connection
-cursor.close()
-conn.close()
 
 # def findrev(x):
 #     for index, row in items.iterrows():
