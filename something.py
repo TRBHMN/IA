@@ -57,7 +57,7 @@ with st.sidebar:
             add_name = st.text_input("", "Name of product?")
             add_og_price = st.text_input("", "Price of product?")
             add_price_sold = st.text_input("", "Price sold of product?")
-            sent = st.st.form_submit_button("Publish/Send off")
+            sent = st.form_submit_button("Publish/Send off")
             if sent:
                 for index, row in items.iterrows():
                     maxi = 0
