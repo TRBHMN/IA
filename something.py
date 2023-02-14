@@ -131,7 +131,7 @@ with columm1:
     icon("search")
 with columm2:
     st.write("Over here, you can search throughout the items, and find a specific product or another, if you want to look at all the products, and their statistics? Search ALL")
-selected = st.text_input("", "Search...")
+selected = st.text_input("", "ALL")
 colum1, colum2 = st.columns(2, gap= "large")
 with colum1:
     name_search = st.button("Search in Product Names")
