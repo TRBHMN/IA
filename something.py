@@ -186,7 +186,7 @@ with st.container():
                 List.append([similarity, index])
             List.sort(key=lambda x: x[0])
             # for index, row in itemxprofit.iterrows():
-            for i in range(len(List)):
+            for i in range(-1, -5, -1):
                 st.write(List[i])
                 # st.write(itemxprofit[itemxprofit.index == i[1]])
         # elif ID_search:
