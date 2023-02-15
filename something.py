@@ -184,11 +184,10 @@ with st.container():
                 similarity = SequenceMatcher(None, selected, index).ratio()
                 st.write(similarity)
                 List.append([similarity, index])
-            List.sort(key=lambda x: x[0], reverse = True)
+            List.sort(key=lambda x: x[0])
             # for index, row in itemxprofit.iterrows():
-            # for i in List:
-                # if index == i[1]:
-            st.write(List)
+            for i in range(len(List), -1, -1):
+                st.write(i)
                 # st.write(itemxprofit[itemxprofit.index == i[1]])
         elif ID_search:
             st.write(itemxprofit[itemxprofit['id'] == selected])
