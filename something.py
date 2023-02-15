@@ -189,7 +189,7 @@ with st.container():
             for index, row in itemxprofit.iterrows():
                 for i in max_similarity_string:
                     if index == i:
-                        st.write(itemxprofit[itemxprofit.index == max_similarity_string])
+                        st.write(itemxprofit[itemxprofit.index == index])
         elif ID_search:
             st.write(itemxprofit[itemxprofit['id'] == selected])
 
