@@ -1,6 +1,6 @@
 body {
-    color: #fff;
-    background-color: #4F8BF9;
+    color: #bababa;
+    background-color: #797979;
 }
 
 .stButton>button {
@@ -12,15 +12,15 @@ body {
     font-weight: 600;
     text-align: center;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #af534c;
     transition: background-color 0.3s ease;
     cursor: pointer;
   }
   
 button:hover {
-    background-color: #3e8e41;
+    background-color: #8e5a3e0a;
   }
 
 .stTextInput>div>div>input {
-    color: #4F8BF9;
+    color: #af534c;
 }
