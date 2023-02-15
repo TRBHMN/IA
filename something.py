@@ -182,6 +182,7 @@ with st.container():
             List = []
             for index, row in itemxprofit.iterrows():
                 similarity = SequenceMatcher(None, selected, index).ratio()
+                st.write(similarity)
                 List.append([similarity, index])
                 List.sort(reverse = True)
             for index, row in itemxprofit.iterrows():
