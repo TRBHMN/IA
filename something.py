@@ -137,7 +137,7 @@ for index, rows in t.iterrows():
 
 
 st.markdown("<h1 style='text-align: center; color: red;'>Data Analysis</h1>", unsafe_allow_html=True)
-st.text('This is a web app to explore purchasing data, and see some visual data of the processes.')
+st.write('This is a web app to explore purchasing data, and see some visual data of the processes.')
 
 text = 'total revenue ==='
 st.write(text, totalrev)
@@ -163,12 +163,13 @@ with columm1:
     icon("search")
 with columm2:
     st.write("Over here, you can search throughout the items, and find a specific product or another, if you want to look at all the products, and their statistics? Search ALL")
-selected = st.text_input("", "ALL")
-colum1, colum2 = st.columns(2, gap= "large")
-with colum1:
-    name_search = st.button("Search in Product Names")
-with colum2:
-    ID_search = st.button("Search in ID Number")
+with st.form("Search Bar"):
+    selected = st.text_input("", "ALL")
+    colum1, colum2 = st.columns(2, gap= "large")
+    with colum1:
+        name_search = st.form_submit_button("Search in Product Names")
+    with colum2:
+        ID_search = st.form_submit_button("Search in ID Number")
 
 #Table
 
