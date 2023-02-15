@@ -70,13 +70,9 @@ with st.sidebar:
             if sent:
                 cursor = conn.cursor()
                 new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
-                query = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
                 cursor.execute("INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)", (add_name, IDn, add_price_sold, typ, add_og_price))
                 cursor.close()
                 connection.close()
-                st.write(add_name)
-                st.write(add_price_sold)
-                st.write(add_og_price)
 
 
 
@@ -92,8 +88,6 @@ for index, row in total.iterrows():
             if index == x:
                 c = row['price_sold']
                 total.loc[y, 'revenue'] = c
-
-
 
 t = total
 t['profit'] = 0
