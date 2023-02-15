@@ -186,10 +186,10 @@ with st.container():
                 List.append([similarity, index])
             List.sort(key=lambda x: x[0])
             # for index, row in itemxprofit.iterrows():
-            for i in List:
-                if index == i[1]:
-                    st.write(i[0])
-                    st.write(itemxprofit[itemxprofit.index == i[1]])
+            # for i in List:
+                # if index == i[1]:
+            st.write(List)
+                # st.write(itemxprofit[itemxprofit.index == i[1]])
         elif ID_search:
             st.write(itemxprofit[itemxprofit['id'] == selected])
 
