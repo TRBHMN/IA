@@ -184,7 +184,7 @@ with st.container():
                 similarity = SequenceMatcher(None, selected, index).ratio()
                 st.write(similarity)
                 List.append([similarity, index])
-            List.sort(key=lambda x: x[0])
+            List.sort(key=lambda x: x[0], reverse = True)
             # for index, row in itemxprofit.iterrows():
             # for i in List:
                 # if index == i[1]:
