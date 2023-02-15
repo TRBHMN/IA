@@ -179,16 +179,14 @@ with st.container():
         st.write(itemxprofit)
     if selected != "":
         if name_search:
-            max_similarity = .75
-            max_similarity_string = []
+            List = []
             for index, row in itemxprofit.iterrows():
                 similarity = SequenceMatcher(None, selected, index).ratio()
-                if similarity > max_similarity:
-                    max_similarity = similarity
-                    max_similarity_string.append(index)
+                List.append([similarity, index])
+                List.sort(reverse = True)
             for index, row in itemxprofit.iterrows():
-                for i in max_similarity_string:
-                    if index == i:
+                for i in List:
+                    if index == i[1]:
                         st.write(itemxprofit[itemxprofit.index == index])
         elif ID_search:
             st.write(itemxprofit[itemxprofit['id'] == selected])
