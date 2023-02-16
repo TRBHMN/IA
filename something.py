@@ -192,7 +192,7 @@ with st.container():
                 for i in range(-1, -6, -1):
                     if index == List[i][1]:
                         row['sim'] = List[i][0]
-            st.write(sorteditems[sorteditems['sim'] > 0] )
+            st.write(sorteditems)
                 # st.write(itemxprofit[itemxprofit.index == i[1]])
         # elif ID_search:
         #     st.write(itemxprofit[itemxprofit['id'] == selected])
