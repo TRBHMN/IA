@@ -189,7 +189,7 @@ with st.container():
             sorteditems = itemxprofit
             sorteditems['sim'] = 0
             for index, row in sorteditems.iterrows():
-                for i in range(-1, -6, -1):
+                for i in range(len(List)):
                     if index == List[i][1]:
                         row['sim'] = List[i][0]
             st.write(sorteditems)
