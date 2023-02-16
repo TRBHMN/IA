@@ -192,6 +192,7 @@ with st.container():
                 for i in range(len(List)):
                     if index == List[i][1]:
                         sorteditems.loc[index, 'sim'] = List[i][0]
+            sortitems = sorteditems.sort_values(by='sim', ascending=False)
             st.write(sorteditems)
                 # st.write(itemxprofit[itemxprofit.index == i[1]])
         # elif ID_search:
