@@ -191,7 +191,7 @@ with st.container():
             for index, row in sorteditems.iterrows():
                 for i in range(-1, -6, -1):
                     if index == List[i][1]:
-                        sorteditems['sim'] = List[i][0]
+                        row['sim'] = List[i][0]
             st.write(sorteditems[sorteditems['sim'] > 0] )
                 # st.write(itemxprofit[itemxprofit.index == i[1]])
         # elif ID_search:
