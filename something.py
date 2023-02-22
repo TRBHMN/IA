@@ -133,6 +133,20 @@ for index, rows in t.iterrows():
     totalprofit = totalprofit + t.loc[index,'profit']
 
 
+o = total
+for index, row in o.iterrows():
+    x = row['date']
+    date_obj = datetime.datetime.strptime(x, "%A, %B %d, %Y")
+    new_format = "%Y/%m/%d"
+    new_date_string = date_obj.strftime(new_format)
+    o.loc[index, 'date'] = new_date_string
+    x = row['date']
+
+x = o.groupby(['date'])['profit'].sum()
+x = x.sort_index(ascending=True)
+
+
+
 # ANALYSIS
 
 
@@ -143,6 +157,8 @@ text = 'total revenue ==='
 st.write(text, totalrev)
 text = "total profit ==="
 st.write(text, totalprofit)
+st.write("Statistics from the day-to-day sales within the club are below...")
+st.write(x.head())
 
 # Search Bar
 def local_css(file_name):
@@ -212,12 +228,7 @@ label_point(itemxprofit[itemxprofit.profit.between(50, 40000)].bought, itemxprof
 st.write("All products, and how many are bought, versus the profit they produce, of only the profit above 50")
 st.pyplot(fig)
 
-# sns.barplot(x='id',y='bought',data=itemxprofit)
-# st.pyplot(fig)
 
-# st.text("Histogram of all of the products")
-# sns.distplot(itemxprofit['profit'], kde=True)
-# st.pyplot(fig)
 o = total
 for index, row in o.iterrows():
     x = row['date']
