@@ -141,9 +141,9 @@ for index, row in o.iterrows():
     new_date_string = date_obj.strftime(new_format)
     o.loc[index, 'date'] = new_date_string
     x = row['date']
+    row['profit'].astype(float).round(2)
+    row['revenue'].astype(float).round(2)
 
-o['profit'].astype(float).round(2)
-o['revenue'].astype(float).round(2)
 x = o.groupby(['date'])['profit','revenue'].sum()
 x = x.sort_index(ascending=False)
 
