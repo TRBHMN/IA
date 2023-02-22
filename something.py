@@ -160,7 +160,7 @@ st.write(text, totalrev)
 text = "total profit ==="
 st.write(text, totalprofit)
 st.write("Statistics from the day-to-day sales within the club are below...")
-st.write(x.head())
+st.write(x)
 
 # Search Bar
 def local_css(file_name):
