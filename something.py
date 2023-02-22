@@ -140,15 +140,9 @@ for index, row in o.iterrows():
     new_format = "%Y/%m/%d"
     new_date_string = date_obj.strftime(new_format)
     o.loc[index, 'date'] = new_date_string
-    x = row['date']
-    y = row['profit']
-    r = row['revenue']
-    y = round(y,2)
-    r = round(r,2)
-    o.loc[index, 'profit'] = y
-    o.loc[index, 'revenye'] = r
 
 x = o.groupby(['date'])['profit','revenue'].sum()
+x = x.round(decimals = 2)
 x = x.sort_index(ascending=False)
 
 
