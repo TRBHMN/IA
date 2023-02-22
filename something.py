@@ -143,8 +143,8 @@ for index, row in o.iterrows():
     x = row['date']
     y = row['profit']
     r = row['revenue']
-    y = x.astype(float).round(2)
-    r = r.astype(float).round(2)
+    y = round(y,2)
+    r = round(r,2)
     o.loc[index, 'profit'] = y
     o.loc[index, 'revenye'] = r
 
