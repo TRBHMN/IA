@@ -232,11 +232,13 @@ st.pyplot(fig)
 o = total
 for index, row in o.iterrows():
     x = row['date']
-    date_obj = datetime.datetime.strptime(x, "%A, %B %d, %Y")
-    new_format = "%Y/%m/%d"
-    new_date_string = date_obj.strftime(new_format)
-    o.loc[index, 'date'] = new_date_string
-    x = row['date']
+    try:
+        date_obj = datetime.datetime.strptime(x, "%A, %B %d, %Y")
+        new_format = "%Y/%m/%d"
+        new_date_string = date_obj.strftime(new_format)
+        o.loc[index, 'date'] = new_date_string
+    except:
+        x = row['date']
 
 x = o.groupby(['date'])['profit'].sum()
 x = x.sort_index(ascending=True)
