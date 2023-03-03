@@ -56,8 +56,8 @@ with st.sidebar:
                 typ = 'utilities'
             st.write(IDn)
             add_name = st.text_input("", "Name of product?")
-            add_og_price = st.text_input("", "Price of product?")
-            add_price_sold = st.text_input("", "Price sold of product?")
+            add_og_price = st.number_input("What is the orignial price of the product", value=0.0, step=0.1)
+            add_price_sold = st.number_input("What is the price you want to sell the product for?", value=0.0, step=0.1)
             sent = st.form_submit_button("Publish/Send off to the inventory")
             if sent:
                 sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
