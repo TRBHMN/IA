@@ -33,14 +33,6 @@ for result in results:
 items = pd.DataFrame.from_dict(lis2)
 items = items.set_index("name")
 
-# Close the cursor and connection
-
-# def findrev(x):
-#     for index, row in items.iterrows():
-#         if x == index:
-#             c = row['price_sold']
-#             return c
-
 for index, row in items.iterrows():
     maxi = 0
     IDn = 0
@@ -50,7 +42,7 @@ for index, row in items.iterrows():
         IDn = int((maxi + 1))
 
 with st.sidebar:
-    add_item = st.button("Would you like to add a new item?")
+    add_item = st.button("Would you like to add a new item to the inventory?")
     if add_item:
         with st.form("my_form"):
             add_type = st.radio(
@@ -66,9 +58,8 @@ with st.sidebar:
             add_name = st.text_input("", "Name of product?")
             add_og_price = st.text_input("", "Price of product?")
             add_price_sold = st.text_input("", "Price sold of product?")
-            sent = st.form_submit_button("Publish/Send off")
+            sent = st.form_submit_button("Publish/Send off to the inventory")
             if sent:
-                cursor.open()
                 new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
                 cursor.execute("INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)", (add_name, IDn, add_price_sold, typ, add_og_price))
                 cursor.close()
