@@ -41,33 +41,33 @@ for index, row in items.iterrows():
         maxi = x
         IDn = int((maxi + 1))
 
-with st.sidebar:
-    add_item = st.button("Would you like to add a new item to the inventory?")
-    if add_item:
-        with st.form("my_form"):
-            add_type = st.radio(
-                "Choose the type of product it would be...",
-                ("Snack", "Drink", "Utility"))
-            if add_type == "Snack":
-                typ = 'snacks'
-            elif add_type == "Drink":
-                typ = 'drinks'
-            elif add_type == "Utility":
-                typ = 'utilities'
-            st.write(IDn)
-            add_name = st.text_input("", "Name of product?")
-            add_og_price = st.number_input("What is the orignial price of the product", value=0.0, step=0.1)
-            add_price_sold = st.number_input("What is the price you want to sell the product for?", value=0.0, step=0.1)
-            sent = st.form_submit_button("Publish/Send off to the inventory")
-            
-            if sent:
-                cursor = conn.cursor()
-                sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
-                values = (add_name, IDn, add_price_sold, typ, add_og_price)
-                cursor.execute(sql, values)
-                conn.commit()
-                cursor.close()
-                conn.close()
+# with st.sidebar:
+add_item = st.button("Would you like to add a new item to the inventory?")
+if add_item:
+    with st.form("my_form"):
+        add_type = st.radio(
+            "Choose the type of product it would be...",
+            ("Snack", "Drink", "Utility"))
+        if add_type == "Snack":
+            typ = 'snacks'
+        elif add_type == "Drink":
+            typ = 'drinks'
+        elif add_type == "Utility":
+            typ = 'utilities'
+        st.write(IDn)
+        add_name = st.text_input("", "Name of product?")
+        add_og_price = st.number_input("What is the orignial price of the product", value=0.0, step=0.1)
+        add_price_sold = st.number_input("What is the price you want to sell the product for?", value=0.0, step=0.1)
+        sent = st.form_submit_button("Publish/Send off to the inventory")
+        
+        if sent:
+            cursor = conn.cursor()
+            sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
+            values = (add_name, IDn, add_price_sold, typ, add_og_price)
+            cursor.execute(sql, values)
+            conn.commit()
+            cursor.close()
+            conn.close()
 
 
 
