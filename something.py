@@ -60,8 +60,9 @@ with st.sidebar:
             add_price_sold = st.text_input("", "Price sold of product?")
             sent = st.form_submit_button("Publish/Send off to the inventory")
             if sent:
+                sql = "INSERT INTO products (product_id, product_name, description, price) VALUES (%s, %s, %s, %s)"
                 new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
-                cursor.execute("INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)", (add_name, IDn, add_price_sold, typ, add_og_price))
+                cursor.execute("INSERT INTO items (name, id, price_sold, type, og_price) VALUES (add_name, IDn, add_price_sold, typ, add_og_price)")
                 cursor.close()
                 connection.close()
 
