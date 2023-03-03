@@ -61,8 +61,8 @@ with st.sidebar:
             sent = st.form_submit_button("Publish/Send off to the inventory")
             if sent:
                 sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
-                new_item = (add_name, IDn, add_price_sold, typ, add_og_price)
-                cursor.execute(sql, new_item)
+                values = (add_name, IDn, add_price_sold, typ, add_og_price)
+                cursor.execute(sql, values)
                 cursor.close()
                 connection.close()
 
