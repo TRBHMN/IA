@@ -8,6 +8,16 @@ import datetime
 from difflib import SequenceMatcher
 sns.set(rc={'figure.figsize':(10,5)})
 
+
+lis = []
+lis2= []
+# Connect to the database
+conn = pymysql.connect(
+    host='learningcomputerscience.com',port=3306, user='test_remote', password='test_remote!',database='9_8_BT', charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
+
+# Create a cursor object
+cursor = conn.cursor()
+
 with st.sidebar:
     add_item = st.button("Would you like to add a new item to the inventory?")
     if add_item:
@@ -39,15 +49,6 @@ with st.sidebar:
                     st.write("connection failed : didnt send")
                     # cursor.close()
                     # conn.close()
-
-lis = []
-lis2= []
-# Connect to the database
-conn = pymysql.connect(
-    host='learningcomputerscience.com',port=3306, user='test_remote', password='test_remote!',database='9_8_BT', charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
-
-# Create a cursor object
-cursor = conn.cursor()
 
 # Execute a SELECT query
 cursor.execute("SELECT * FROM recipt")
