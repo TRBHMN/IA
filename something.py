@@ -18,7 +18,7 @@ conn = pymysql.connect(
 # Create a cursor object
 cursor = conn.cursor()
 
-bruh == bool(False)
+bruh = False
 
 with st.sidebar:
     add_item = st.button("Would you like to add a new item to the inventory?")
@@ -40,7 +40,7 @@ with st.sidebar:
             add_price_sold = st.number_input("What is the price you want to sell the product for?", value=0.0, step=0.1)
             sent = st.form_submit_button("Publish/Send off to the inventory")
             if sent:
-                bruh == True
+                bruh = True
                 st.write("All sent")
 
 sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
@@ -48,7 +48,7 @@ values = (add_name, IDn, add_price_sold, typ, add_og_price)
 if bruh == True:
     cursor.execute(sql, values)
     conn.commit()
-    bruh == False
+    bruh = False
 st.write("connection failed : didnt send")
                     # cursor.close()
                         # conn.close()
