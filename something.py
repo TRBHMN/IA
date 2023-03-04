@@ -17,7 +17,8 @@ conn = pymysql.connect(
 
 # Create a cursor object
 cursor = conn.cursor()
-bruh == False
+
+bruh == bool(False)
 
 with st.sidebar:
     add_item = st.button("Would you like to add a new item to the inventory?")
