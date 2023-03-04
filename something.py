@@ -36,16 +36,16 @@ with st.sidebar:
             add_name = st.text_input("", "Name of product?")
             add_og_price = st.number_input("What is the orignial price of the product", value=0.0, step=0.1)
             add_price_sold = st.number_input("What is the price you want to sell the product for?", value=0.0, step=0.1)
-            sent = st.form_submit_button("Publish/Send off to the inventory")
+        sent = st.form_submit_button("Publish/Send off to the inventory")
             
-            if sent:
-                cursor = conn.cursor()
-                sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
-                values = (add_name, IDn, add_price_sold, typ, add_og_price)
-                cursor.execute(sql, values)
-                conn.commit()
-                st.write("connection failed : didnt send")
-                    # cursor.close()
+        if sent:
+            cursor = conn.cursor()
+            sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
+            values = (add_name, IDn, add_price_sold, typ, add_og_price)
+            cursor.execute(sql, values)
+            conn.commit()
+            st.write("connection failed : didnt send")
+                # cursor.close()
                     # conn.close()
 
 # Execute a SELECT query
