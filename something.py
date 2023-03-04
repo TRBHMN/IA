@@ -42,11 +42,9 @@ with st.sidebar:
                 cursor = conn.cursor()
                 sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
                 values = (add_name, IDn, add_price_sold, typ, add_og_price)
-                try:
-                    cursor.execute(sql, values)
-                    conn.commit()
-                except:
-                    st.write("connection failed : didnt send")
+                cursor.execute(sql, values)
+                conn.commit()
+                st.write("connection failed : didnt send")
                     # cursor.close()
                     # conn.close()
 
