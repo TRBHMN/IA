@@ -42,11 +42,8 @@ with st.sidebar:
                 cursor = conn.cursor()
                 sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
                 values = (add_name, IDn, add_price_sold, typ, add_og_price)
-                cursor.execute(sql, values)
-                conn.commit()
-                st.write("connection failed : didnt send")
-                    # cursor.close()
-                        # conn.close()
+cursor.execute(sql, values)
+conn.commit()
 
 # Execute a SELECT query
 cursor.execute("SELECT * FROM recipt")
@@ -63,6 +60,8 @@ for result in results:
     lis2.append(result)
 items = pd.DataFrame.from_dict(lis2)
 items = items.set_index("name")
+
+conn.close()
 
 for index, row in total.iterrows():
     x = row['item']
