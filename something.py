@@ -42,8 +42,8 @@ with st.sidebar:
                 cursor = conn.cursor()
                 sql = "INSERT INTO items (name, id, price_sold, type, og_price) VALUES (%s, %s, %s, %s, %s)"
                 values = (add_name, IDn, add_price_sold, typ, add_og_price)
-cursor.execute(sql, values)
-conn.commit()
+                cursor.execute(sql, values)
+                conn.commit()
 
 # Execute a SELECT query
 cursor.execute("SELECT * FROM recipt")
