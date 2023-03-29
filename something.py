@@ -125,8 +125,6 @@ for index, row in o.iterrows():
     newdateform = date.strftime(form)
     o.loc[index, 'date'] = newdateform
 
-o = o['profit'].round(decimals = 2)
-o = o['revenue'].round(decimals = 2)
 x = o.groupby(['date'])['profit','revenue'].sum()
 x = x.sort_index(ascending=False)
 
