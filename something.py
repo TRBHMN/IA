@@ -120,12 +120,13 @@ for index, rows in t.iterrows():
 o = total
 for index, row in o.iterrows():
     x = row['date']
-    date_obj = datetime.datetime.strptime(x, "%A, %B %d, %Y")
-    new_format = "%Y/%m/%d"
-    new_date_string = date_obj.strftime(new_format)
-    o.loc[index, 'date'] = new_date_string
+    form = "%Y/%m/%d"
+    date = datetime.datetime.strptime(x, "%A, %B %d, %Y")
+    newdateform = date.strftime(form)
+    o.loc[index, 'date'] = newdateform
 
-o = o.round(decimals = 2)
+o = o['profit'].round(decimals = 2)
+o = o['revenue'].round(decimals = 2)
 x = o.groupby(['date'])['profit','revenue'].sum()
 x = x.sort_index(ascending=False)
 
@@ -213,20 +214,6 @@ label_point(itemxprofit[itemxprofit.profit.between(50, 40000)].bought, itemxprof
 st.write("All products, and how many are bought, versus the profit they produce, of only the profit above 50")
 st.pyplot(fig)
 
-
-o = total
-for index, row in o.iterrows():
-    x = row['date']
-    try:
-        date_obj = datetime.datetime.strptime(x, "%A, %B %d, %Y")
-        new_format = "%Y/%m/%d"
-        new_date_string = date_obj.strftime(new_format)
-        o.loc[index, 'date'] = new_date_string
-    except:
-        x = row['date']
-
-x = o.groupby(['date'])['profit'].sum()
-x = x.sort_index(ascending=True)
 
 st.write("Profit over time is displayed here. Where it is the profit over every day that we have sold so far")
 st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
