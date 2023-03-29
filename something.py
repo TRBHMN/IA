@@ -172,8 +172,6 @@ with st.form("Search Bar"):
         ID_search = st.form_submit_button("Search in ID Number")
 
 #Table
-
-
 with st.container():
     if selected == "ALL":
         st.write(itemxprofit)
@@ -193,7 +191,7 @@ with st.container():
                         sorteditems.loc[index, 'sim'] = List[i][0]
             sortitems = sorteditems.sort_values(by=['sim'], ascending=False)
             st.write(sortitems)
-        elif ID_search:
+        if ID_search:
             for index, row in itemxprofit.iterrows():
                 g = row['id'] 
                 if selected == g:
