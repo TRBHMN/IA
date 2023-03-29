@@ -194,7 +194,7 @@ with st.container():
             for index, row in itemxprofit.iterrows():
                 g = row['id'] 
                 if selected == g:
-                    st.write(itemxprofit[itemxprofit['id'] == selected])
+                    st.write(itemxprofit[itemxprofit['id'] = selected])
 
 
 #Graphs
