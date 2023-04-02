@@ -215,12 +215,12 @@ st.pyplot(fig)
 
 
 st.write("Profit over time is displayed here. Where it is the profit over every day that we have sold so far")
-# st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
+st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
 
 
-fig = plt.figure(figsize=(10, 4))
-sns.barplot(x='id',y='bought',data=itemxprofit[itemxprofit['bought']>10])
-st.pyplot(fig)
+# fig = plt.figure(figsize=(10, 4))
+# sns.barplot(x='id',y='bought',data=itemxprofit[itemxprofit['bought']>10])
+# st.pyplot(fig)
 
 st.write("Over here, we have the distribution of products and how many of they are in the zone where they do not produce enough profit, and the density of that location")
 fig = plt.figure(figsize=(10, 4))
