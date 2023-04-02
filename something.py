@@ -125,7 +125,7 @@ for index, row in o.iterrows():
     newdateform = date.strftime(form)
     o.loc[index, 'date'] = newdateform
 
-x = o.groupby(['date'])['profit','revenue'].sum()
+x = o.groupby(['date'])['profit','revenue','bought'].sum()
 x = x.sort_index(ascending=False)
 
 
@@ -157,7 +157,7 @@ def icon(icon_name):
 local_css("style.css")
 remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
 
-columm1, columm2 = st.columns(2, gap= "small")
+columm1, columm2 = st.columns(2, gap= "large")
 with columm1:
     icon("search")
 with columm2:
