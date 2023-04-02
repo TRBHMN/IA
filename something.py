@@ -217,7 +217,7 @@ x = o.groupby(['date'])['profit','revenue','quantity_bought'].sum()
 x.rename(columns = {'quantity_bought':'Number of Items Bought Per Day', "revenue":"Revenue Per Day", "profit":"Profit Per Day"}, inplace = True)
 x = x.sort_index(ascending=False)
 st.write("Profit over time is displayed here. Where it is the profit over every day that we have sold so far")
-st.line_chart(data=x, x=x.index, y=['profit'], use_container_width=True)
+st.line_chart(data=x['Profit Per Day'], use_container_width=True)
 
 
 # fig = plt.figure(figsize=(10, 4))
