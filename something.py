@@ -126,6 +126,7 @@ for index, row in o.iterrows():
     o.loc[index, 'date'] = newdateform
 
 x = o.groupby(['date'])['profit','revenue','quantity_bought'].sum()
+x.rename(columns = {'quantity_bought':'Number of Items Bought Per Day', "revenue":"Revenue Per Day", "profit":"Profit Per Day"}, inplace = True)
 x = x.sort_index(ascending=False)
 
 
