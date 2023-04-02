@@ -157,7 +157,7 @@ def icon(icon_name):
 local_css("style.css")
 remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
 
-columm1, columm2 = st.columns(2, gap= "large")
+columm1, columm2 = st.columns(2, gap= "small")
 with columm1:
     icon("search")
 with columm2:
