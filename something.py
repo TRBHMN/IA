@@ -215,7 +215,7 @@ st.pyplot(fig)
 
 
 st.write("Profit over time is displayed here. Where it is the profit over every day that we have sold so far")
-st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
+# st.line_chart(data=x, x=index, y=['profit'], width=0, height=0, use_container_width=True)
 
 
 # fig = plt.figure(figsize=(10, 4))
